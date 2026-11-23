@@ -32,6 +32,7 @@ import {
   LuxuryCard,
   AnimatedImage,
   AnimatedCounter,
+  CountUpNumber,
   InfiniteMarquee,
 } from "@/components/MotionPrimitives";
 
@@ -161,7 +162,7 @@ export default function HomePage() {
                   imgClassName="w-full h-[480px]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none">
+                  <div className="absolute bottom-6 left-6 right-6 pl-4 sm:pl-48 text-white pointer-events-none z-10">
                     <span className="inline-block px-2.5 py-1 rounded bg-[#B08968] text-white text-[11px] font-bold uppercase tracking-wider mb-1">
                       Clinic Ambiance
                     </span>
@@ -174,44 +175,61 @@ export default function HomePage() {
                   </div>
                 </AnimatedImage>
 
-                {/* Floating Card 1 */}
+                {/* Floating Card 1: 15,000+ Patients */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6, duration: 0.6 }}
-                  className="absolute -bottom-6 -left-6 bg-[#FAF8F5] border border-[#B08968]/40 rounded-2xl p-4 shadow-xl max-w-[210px] hidden sm:block"
+                  animate={{
+                    opacity: 1,
+                    y: [0, 6, 0],
+                  }}
+                  transition={{
+                    opacity: { delay: 0.6, duration: 0.6 },
+                    y: { repeat: Infinity, duration: 4, ease: "easeInOut" },
+                  }}
+                  className="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 bg-[#FAF8F5]/95 backdrop-blur-md border border-[#B08968]/40 rounded-2xl p-4 shadow-xl max-w-[210px] hidden sm:block z-20"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#1E6B52]/10 text-[#1E6B52] flex items-center justify-center font-bold">
+                    <div className="w-10 h-10 rounded-xl bg-[#1E6B52]/10 text-[#1E6B52] flex items-center justify-center font-bold shrink-0">
                       <CheckCircle2 className="w-5 h-5" />
                     </div>
                     <div>
                       <div className="font-serif font-bold text-lg text-[#1F2421] leading-none">
-                        15,000+
+                        <CountUpNumber end={15000} formatCommas={true} suffix="+" />
                       </div>
-                      <div className="text-[11px] text-[#5C5852] mt-0.5">
+                      <div className="text-[11px] text-[#5C5852] mt-0.5 font-medium leading-tight">
                         Satisfied Gujranwala Patients
                       </div>
                     </div>
                   </div>
                 </motion.div>
 
-                {/* Floating Card 2 */}
+                {/* Floating Card 2: 4.9 Rating */}
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7, duration: 0.6 }}
-                  className="absolute -top-6 -right-4 bg-[#FAF8F5] border border-[#B08968]/40 rounded-2xl p-4 shadow-xl hidden sm:flex items-center gap-3"
+                  animate={{
+                    opacity: 1,
+                    y: [0, -6, 0],
+                  }}
+                  transition={{
+                    opacity: { delay: 0.7, duration: 0.6 },
+                    y: { repeat: Infinity, duration: 3.5, ease: "easeInOut" },
+                  }}
+                  className="absolute -top-5 -right-3 sm:-top-6 sm:-right-4 bg-[#FAF8F5]/95 backdrop-blur-md border border-[#B08968]/40 rounded-2xl p-4 shadow-xl hidden sm:flex items-center gap-3 z-20"
                 >
-                  <div className="w-10 h-10 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                  <div className="w-10 h-10 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold shrink-0">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#1F2421]">
                       Gujranwala&apos;s Choice
                     </div>
-                    <div className="text-[11px] text-[#5C5852]">
-                      4.9 ★ (139 Reviews)
+                    <div className="text-[11px] text-[#5C5852] font-semibold flex items-center gap-1 mt-0.5">
+                      <span className="text-[#1F2421]">
+                        <CountUpNumber end={4.9} decimals={1} suffix=" ★" />
+                      </span>
+                      <span>
+                        (<CountUpNumber end={139} /> Reviews)
+                      </span>
                     </div>
                   </div>
                 </motion.div>
@@ -227,18 +245,18 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-[#B08968]/20">
             <div className="p-4">
               <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]">
-                <AnimatedCounter from={0} to={4.9} decimals={1} suffix=" ★" />
+                <CountUpNumber end={4.9} decimals={1} suffix=" ★" />
               </div>
               <p className="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">
                 Google Rating
               </p>
               <span className="text-[11px] text-[#B08968]">
-                <AnimatedCounter from={0} to={139} suffix="+" /> Verified Reviews
+                <CountUpNumber end={139} suffix="+ Verified Reviews" />
               </span>
             </div>
             <div className="p-4">
               <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]">
-                <AnimatedCounter from={0} to={15000} duration={1.8} suffix="+" />
+                <CountUpNumber end={15000} formatCommas={true} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">
                 Procedures Completed
@@ -249,7 +267,7 @@ export default function HomePage() {
             </div>
             <div className="p-4">
               <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]">
-                <AnimatedCounter from={0} to={10} duration={1.4} suffix="+" />
+                <CountUpNumber end={10} suffix="+" />
               </div>
               <p className="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">
                 Years Clinical Mastery
@@ -260,7 +278,7 @@ export default function HomePage() {
             </div>
             <div className="p-4">
               <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]">
-                <AnimatedCounter from={0} to={100} duration={1.6} suffix="%" />
+                <CountUpNumber end={100} suffix="%" />
               </div>
               <p className="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">
                 FDA-Approved Lasers
@@ -281,9 +299,11 @@ export default function HomePage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">
                 Personalized Dermatology
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
-                Browse by Your Concern
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
+                  Browse by Your Concern
+                </h2>
+              </MaskedReveal>
               <div className="w-16 h-0.5 bg-[#B08968] mx-auto my-4" />
               <p className="text-[#5C5852] text-base">
                 Select your primary concern to discover our customized medical
@@ -437,9 +457,11 @@ export default function HomePage() {
                 <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">
                   Our Signature Procedures
                 </span>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
-                  Clinical Treatments
-                </h2>
+                <MaskedReveal>
+                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
+                    Clinical Treatments
+                  </h2>
+                </MaskedReveal>
               </div>
               <p className="text-sm sm:text-base text-[#5C5852] max-w-md">
                 Administered exclusively with international FDA-cleared devices
@@ -784,9 +806,11 @@ export default function HomePage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block">
                 Verified Clinical Transformation
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
-                Interactive Before & After
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
+                  Interactive Before & After
+                </h2>
+              </MaskedReveal>
               <p className="text-[#5C5852] leading-relaxed">
                 Drag the golden divider left or right to inspect the dramatic
                 epidermal regeneration achieved with our specialized Fractional
@@ -863,9 +887,11 @@ export default function HomePage() {
                 Google Rating 4.9 ★ (139 Verified Reviews)
               </span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAF8F5]">
-              Real Voices from Gujranwala
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#FAF8F5]">
+                Real Voices from Gujranwala
+              </h2>
+            </MaskedReveal>
             <p className="text-sm text-[#EFE8DE]/70 mt-2 max-w-xl mx-auto">
               Read authentic patient experiences from Kashmir Road, Peoples Colony.
               Hover cursor over any review to pause.
@@ -954,9 +980,11 @@ export default function HomePage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">
                 Visit Our Gujranwala Clinic
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
-                Location & Clinic Hours
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                  Location & Clinic Hours
+                </h2>
+              </MaskedReveal>
               <div className="w-16 h-0.5 bg-[#B08968] mx-auto my-4" />
               <p className="text-sm text-[#5C5852]">
                 Conveniently situated in Sector W, Peoples Colony on Kashmir Road.

@@ -16,6 +16,7 @@ import {
   LuxuryCard,
   AnimatedImage,
   AnimatedCounter,
+  CountUpNumber,
 } from "@/components/MotionPrimitives";
 
 export const metadata = {
@@ -89,11 +90,11 @@ export default function AboutPage() {
                 <div className="pt-4 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
-                    <span>Over <AnimatedCounter from={0} to={15000} duration={1.8} suffix="+" /> Procedures</span>
+                    <span>Over <CountUpNumber end={15000} formatCommas={true} suffix="+" /> Procedures</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
-                    <span><AnimatedCounter from={0} to={4.9} decimals={1} suffix=" ★" /> Rating (<AnimatedCounter from={0} to={139} suffix="+" /> Google Reviews)</span>
+                    <span><CountUpNumber end={4.9} decimals={1} suffix=" ★" /> Rating (<CountUpNumber end={139} suffix="+" /> Google Reviews)</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
@@ -123,9 +124,11 @@ export default function AboutPage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">
                 Our Clinical Faculty
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
-                Directed by Certified Medical Doctors
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                  Directed by Certified Medical Doctors
+                </h2>
+              </MaskedReveal>
               <div className="w-16 h-0.5 bg-[#B08968] mx-auto my-4" />
               <p className="text-sm text-[#5C5852]">
                 Your skin is a vital organ. Every treatment at Insta Skin Clinic
@@ -229,9 +232,11 @@ export default function AboutPage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#D8C3A5] block mb-2">
                 The Technology Distinction
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
-                Why Medical Grade Laser Technology Matters
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+                  Why Medical Grade Laser Technology Matters
+                </h2>
+              </MaskedReveal>
               <div className="w-16 h-0.5 bg-[#B08968] mx-auto my-4" />
               <p className="text-sm text-[#EFE8DE]/80">
                 In Pakistan, many commercial salons market non-medical cosmetic
@@ -341,9 +346,11 @@ export default function AboutPage() {
               <span className="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">
                 Hospital Standards
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
-                Sterile Sanctuary Protocol
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                  Sterile Sanctuary Protocol
+                </h2>
+              </MaskedReveal>
               <div className="w-16 h-0.5 bg-[#B08968] mx-auto my-4" />
               <p className="text-sm text-[#5C5852]">
                 We adhere to strict hospital sterilization rules so you can
@@ -408,9 +415,11 @@ export default function AboutPage() {
       {/* CTA Box */}
       <section className="py-16 bg-[#F2EDE4] border-t border-[#B08968]/20">
         <FadeInUp className="max-w-4xl mx-auto px-4 text-center space-y-5">
-          <h2 className="font-serif text-3xl font-bold text-[#1F2421]">
-            Meet with Our Doctors on Kashmir Road
-          </h2>
+          <MaskedReveal>
+            <h2 className="font-serif text-3xl font-bold text-[#1F2421]">
+              Meet with Our Doctors on Kashmir Road
+            </h2>
+          </MaskedReveal>
           <p className="text-sm text-[#5C5852] max-w-xl mx-auto">
             Schedule your comprehensive dermatological consultation today. Our
             medical team is ready to evaluate your skin and hair profile.

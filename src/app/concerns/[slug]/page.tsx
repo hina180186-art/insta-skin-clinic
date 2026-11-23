@@ -179,9 +179,11 @@ export default async function ConcernDetailPage({ params }: Props) {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <FadeInUp>
           <div className="bg-[#F2EDE4] rounded-3xl p-8 sm:p-10 border border-[#B08968]/20 shadow-sm">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2421] mb-4">
-              Understanding This Condition
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2421] mb-4">
+                Understanding This Condition
+              </h2>
+            </MaskedReveal>
             <p className="text-base sm:text-lg text-[#5C5852] leading-relaxed">
               {concern.overview}
             </p>
@@ -196,9 +198,11 @@ export default async function ConcernDetailPage({ params }: Props) {
             <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
               Medical Etiology
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
-              {concern.causesTitle}
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
+                {concern.causesTitle}
+              </h2>
+            </MaskedReveal>
             <p className="text-sm sm:text-base text-[#5C5852]">
               {concern.causesIntro}
             </p>
@@ -293,9 +297,11 @@ export default async function ConcernDetailPage({ params }: Props) {
             <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
               Dermatologist Insights
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#1F2421] mt-2 mb-3">
-              Common Questions & Clinical Answers
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-3xl font-bold text-[#1F2421] mt-2 mb-3">
+                Common Questions & Clinical Answers
+              </h2>
+            </MaskedReveal>
             <p className="text-sm text-[#5C5852]">
               Evidence-based medical advice for Gujranwala patients.
             </p>
@@ -312,9 +318,11 @@ export default async function ConcernDetailPage({ params }: Props) {
               <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
                 Get Started
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
-                Schedule Your In-Depth Assessment
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
+                  Schedule Your In-Depth Assessment
+                </h2>
+              </MaskedReveal>
               <p className="text-sm sm:text-base text-[#5C5852] mb-8 leading-relaxed">
                 Meet our board-certified dermatologists at Insta Skin Clinic,
                 Kashmir Rd, Sector W Peoples Colony, Gujranwala.

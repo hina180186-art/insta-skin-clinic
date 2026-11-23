@@ -246,9 +246,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <FadeInUp>
           <div className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-10 border border-[#B08968]/20 shadow-sm">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2421] mb-4">
-              Clinical Overview
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2421] mb-4">
+                Clinical Overview
+              </h2>
+            </MaskedReveal>
             <p className="text-base sm:text-lg text-[#5C5852] leading-relaxed">
               {treatment.overview}
             </p>
@@ -263,9 +265,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
             <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
               The Science & Medical Mechanism
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
-              {treatment.howItWorksTitle}
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421] mt-2 mb-4">
+                {treatment.howItWorksTitle}
+              </h2>
+            </MaskedReveal>
             <p className="text-sm sm:text-base text-[#5C5852]">
               {treatment.howItWorksIntro}
             </p>
@@ -299,9 +303,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
               <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
                 Patient Suitability
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">
-                Who Is an Ideal Candidate?
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">
+                  Who Is an Ideal Candidate?
+                </h2>
+              </MaskedReveal>
               <p className="text-sm sm:text-base text-[#FAF8F5]/75">
                 Insta Skin Clinic customizes treatment parameters to your unique
                 skin phototype, follicular thickness, and dermatological history.
@@ -385,9 +391,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
             <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
               Got Questions?
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#1F2421] mt-2 mb-3">
-              Frequently Asked Questions
-            </h2>
+            <MaskedReveal>
+              <h2 className="font-serif text-3xl font-bold text-[#1F2421] mt-2 mb-3">
+                Frequently Asked Questions
+              </h2>
+            </MaskedReveal>
             <p className="text-sm text-[#5C5852]">
               Clinical answers from our board-certified dermatologists at Kashmir
               Road, Peoples Colony.
@@ -405,9 +413,11 @@ export default async function TreatmentDetailPage({ params }: Props) {
               <span className="text-xs font-bold uppercase tracking-widest text-[#B08968]">
                 Personalized Evaluation
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">
-                Begin Your Treatment at Insta Skin Clinic
-              </h2>
+              <MaskedReveal>
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-4">
+                  Begin Your Treatment at Insta Skin Clinic
+                </h2>
+              </MaskedReveal>
               <p className="text-sm sm:text-base text-[#FAF8F5]/80 mb-8 leading-relaxed">
                 Schedule your comprehensive skin and hair assessment with our
                 doctor. Kashmir Rd, Sector W Peoples Colony, Gujranwala.

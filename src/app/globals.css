@@ -147,13 +147,15 @@ body {
 }
 
 /* Marquee */
-.marquee-track {
+.marquee-track,
+.marquee-animation {
   display: flex;
   width: max-content;
   animation: marqueeScroll 45s linear infinite;
 }
 
-.marquee-track:hover {
+.marquee-track:hover,
+.marquee-animation:hover {
   animation-play-state: paused;
 }
 

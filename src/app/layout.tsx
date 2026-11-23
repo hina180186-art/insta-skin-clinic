@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppDrawer from "@/components/WhatsAppDrawer";
 import { ScrollProgressBar } from "@/components/MotionPrimitives";
+import MotionProvider from "@/components/MotionProvider";
 
 export const metadata: Metadata = {
   title: "Insta Skin Clinic | Skin, Laser & Hair Clinic Gujranwala | 4.9 ★",
@@ -20,14 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-[#FAF8F5] text-[#1F2421] font-sans antialiased selection:bg-[#B08968] selection:text-[#FAF8F5] min-h-screen flex flex-col justify-between">
-        <ScrollProgressBar />
-        <div>
-          <AnnouncementBar />
-          <Header />
-          <main>{children}</main>
-        </div>
-        <Footer />
-        <WhatsAppDrawer />
+        <MotionProvider>
+          <ScrollProgressBar />
+          <div>
+            <AnnouncementBar />
+            <Header />
+            <main>{children}</main>
+          </div>
+          <Footer />
+          <WhatsAppDrawer />
+        </MotionProvider>
       </body>
     </html>
   );
