@@ -26,7 +26,7 @@ import {
   StaggerContainer,
   StaggerItem,
   LuxuryCard,
-  ParallaxImage,
+  AnimatedImage,
 } from "@/components/MotionPrimitives";
 
 type Props = {
@@ -155,27 +155,22 @@ export default async function ConcernDetailPage({ params }: Props) {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <ParallaxImage offset={20}>
-              <div className="relative h-72 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden shadow-xl border border-[#B08968]/20 group">
-                <Image
-                  src={concern.heroImage}
-                  alt={concern.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 bg-[#FAF8F5]/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 text-[#1F2421]">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#B08968]">
-                    Evidence-Based Care
-                  </p>
-                  <p className="text-xs sm:text-sm font-serif font-bold">
-                    Root-Cause Diagnostic Assessment &bull; Zero Steroids
-                  </p>
-                </div>
+            <AnimatedImage
+              src={concern.heroImage}
+              alt={concern.title}
+              className="h-72 sm:h-96 lg:h-[420px]"
+              imgClassName="h-72 sm:h-96 lg:h-[420px]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 bg-[#FAF8F5]/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 text-[#1F2421] pointer-events-none">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#B08968]">
+                  Evidence-Based Care
+                </p>
+                <p className="text-xs sm:text-sm font-serif font-bold">
+                  Root-Cause Diagnostic Assessment &bull; Zero Steroids
+                </p>
               </div>
-            </ParallaxImage>
+            </AnimatedImage>
           </div>
         </div>
       </section>
@@ -234,7 +229,7 @@ export default async function ConcernDetailPage({ params }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* What Fails */}
           <FadeInUp delay={0.1}>
-            <div className="bg-[#FAF8F5] rounded-3xl p-8 border border-red-200 shadow-sm relative overflow-hidden h-full">
+            <LuxuryCard className="bg-[#FAF8F5] rounded-3xl p-8 border border-red-200 shadow-sm relative overflow-hidden h-full">
               <div className="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-4">
                 <AlertTriangle className="w-5 h-5" />
               </div>
@@ -244,12 +239,12 @@ export default async function ConcernDetailPage({ params }: Props) {
               <p className="text-sm sm:text-base text-[#5C5852] leading-relaxed">
                 {concern.failsDescription}
               </p>
-            </div>
+            </LuxuryCard>
           </FadeInUp>
 
           {/* What Works */}
           <FadeInUp delay={0.2}>
-            <div className="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1E6B52]/40 shadow-sm relative overflow-hidden h-full">
+            <LuxuryCard className="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1E6B52]/40 shadow-sm relative overflow-hidden h-full">
               <div className="w-10 h-10 rounded-xl bg-[#1E6B52]/15 text-[#1E6B52] flex items-center justify-center mb-4">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
@@ -259,7 +254,7 @@ export default async function ConcernDetailPage({ params }: Props) {
               <p className="text-sm sm:text-base text-[#5C5852] leading-relaxed">
                 {concern.worksDescription}
               </p>
-            </div>
+            </LuxuryCard>
           </FadeInUp>
         </div>
       </section>

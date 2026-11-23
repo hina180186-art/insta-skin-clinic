@@ -1,14 +1,45 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ShieldCheck } from "lucide-react";
+import { Sparkles, ShieldCheck, Star } from "lucide-react";
 import ResultsFilter from "@/components/ResultsFilter";
-import { MaskedReveal, FadeInUp } from "@/components/MotionPrimitives";
+import {
+  MaskedReveal,
+  FadeInUp,
+  InfiniteMarquee,
+} from "@/components/MotionPrimitives";
 
 export const metadata = {
   title: "Before & After Clinical Transformations | Insta Skin Clinic Gujranwala",
   description:
     "Explore verified before and after clinical results for acne scars, laser hair removal, HydraFacial MD, and PRP hair restoration at Insta Skin Clinic Gujranwala.",
 };
+
+const REVIEWS = [
+  {
+    text: "The acne scar results speak for themselves. After 4 sessions of Fractional CO2, my skin is smoother than it's ever been. Dr. Akhtar is an expert.",
+    author: "Usman Bilal",
+    sub: "Fractional CO2 Patient",
+    initials: "UB",
+  },
+  {
+    text: "Painless laser hair removal! Best machine in Gujranwala, very gentle and sterile. Highly recommend to everyone on Kashmir Road.",
+    author: "Fatima Aslam",
+    sub: "Laser Hair Removal",
+    initials: "FA",
+  },
+  {
+    text: "Bridal HydraFacial gave me glass skin for my wedding. The glow lasted for weeks without any irritation.",
+    author: "Zainab Q.",
+    sub: "HydraFacial MD",
+    initials: "ZQ",
+  },
+  {
+    text: "Hair shedding stopped completely after PRP session 3. Real doctors, real clinical protocol. Worth every rupee.",
+    author: "Hamza Riaz",
+    sub: "PRP Hair Therapy",
+    initials: "HR",
+  },
+];
 
 export default function ResultsPage() {
   return (
@@ -59,6 +90,53 @@ export default function ResultsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ResultsFilter />
         </div>
+      </section>
+
+      {/* Infinite Google Reviews Marquee on Results Page */}
+      <section className="py-16 bg-[#1F2421] text-[#FAF8F5] overflow-hidden relative border-t border-[#B08968]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+          <FadeInUp>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#B08968] block mb-2">
+              Verified Feedback
+            </span>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#FAF8F5]">
+              Real Patients Behind The Results
+            </h2>
+          </FadeInUp>
+        </div>
+        <InfiniteMarquee speed={40}>
+          {REVIEWS.map((rev, i) => (
+            <div
+              key={i}
+              className="w-[340px] bg-[#272E2A] p-5 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex text-amber-400">
+                    {[...Array(5)].map((_, s) => (
+                      <Star key={s} className="w-3.5 h-3.5 fill-amber-400" />
+                    ))}
+                  </div>
+                  <span className="text-[10px] text-[#B08968] font-bold">
+                    4.9 ★ Verified
+                  </span>
+                </div>
+                <p className="text-xs text-[#EFE8DE]/90 leading-relaxed italic">
+                  &ldquo;{rev.text}&rdquo;
+                </p>
+              </div>
+              <div className="mt-3 pt-3 border-t border-[#B08968]/20 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+                  {rev.initials}
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-white">{rev.author}</div>
+                  <div className="text-[10px] text-[#B08968]">{rev.sub}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </InfiniteMarquee>
       </section>
 
       {/* Confidentiality Notice */}

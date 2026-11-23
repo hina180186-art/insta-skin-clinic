@@ -30,7 +30,7 @@ import {
   StaggerContainer,
   StaggerItem,
   LuxuryCard,
-  ParallaxImage,
+  AnimatedImage,
   AnimatedCounter,
   InfiniteMarquee,
 } from "@/components/MotionPrimitives";
@@ -151,30 +151,28 @@ export default function HomePage() {
               </FadeInUp>
             </div>
 
-            {/* Right Column: Visual Frame with Parallax */}
+            {/* Right Column: Visual Frame with Animated Image */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                <ParallaxImage offset={20}>
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#B08968]/30 bg-[#F2EDE4]">
-                    <img
-                      src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
-                      alt="Insta Skin Clinic Gujranwala State-of-the-Art Treatment Suite"
-                      className="w-full h-[480px] object-cover transition-transform duration-700 hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-6 left-6 right-6 text-white">
-                      <span className="inline-block px-2.5 py-1 rounded bg-[#B08968] text-white text-[11px] font-bold uppercase tracking-wider mb-1">
-                        Clinic Ambiance
-                      </span>
-                      <p className="font-serif text-lg font-semibold text-[#FAF8F5]">
-                        Kashmir Rd, Sector W Peoples Colony
-                      </p>
-                      <p className="text-xs text-[#EFE8DE]/80">
-                        Designed for ultimate privacy, safety, and comfort.
-                      </p>
-                    </div>
+                <AnimatedImage
+                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                  alt="Insta Skin Clinic Gujranwala State-of-the-Art Treatment Suite"
+                  className="w-full h-[480px]"
+                  imgClassName="w-full h-[480px]"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-6 left-6 right-6 text-white pointer-events-none">
+                    <span className="inline-block px-2.5 py-1 rounded bg-[#B08968] text-white text-[11px] font-bold uppercase tracking-wider mb-1">
+                      Clinic Ambiance
+                    </span>
+                    <p className="font-serif text-lg font-semibold text-[#FAF8F5]">
+                      Kashmir Rd, Sector W Peoples Colony
+                    </p>
+                    <p className="text-xs text-[#EFE8DE]/80">
+                      Designed for ultimate privacy, safety, and comfort.
+                    </p>
                   </div>
-                </ParallaxImage>
+                </AnimatedImage>
 
                 {/* Floating Card 1 */}
                 <motion.div
@@ -235,7 +233,7 @@ export default function HomePage() {
                 Google Rating
               </p>
               <span className="text-[11px] text-[#B08968]">
-                139 Verified Reviews
+                <AnimatedCounter from={0} to={139} suffix="+" /> Verified Reviews
               </span>
             </div>
             <div className="p-4">
@@ -456,12 +454,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80"
                       alt="Triple Wavelength Laser Hair Removal Gujranwala"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Painless Ice-Cooling
                     </div>
                   </div>
@@ -509,12 +508,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1512290900672-1f0236a28189?auto=format&fit=crop&w=800&q=80"
                       alt="Signature Medical HydraFacial MD at Insta Skin Clinic"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Zero Downtime Glow
                     </div>
                   </div>
@@ -562,12 +562,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1585751119414-ef2636f8aede?auto=format&fit=crop&w=800&q=80"
                       alt="PRP Scalp & Hair Restoration Therapy Gujranwala"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Autologous Growth Factors
                     </div>
                   </div>
@@ -615,12 +616,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
                       alt="Fractional CO2 Laser for Acne Scars Gujranwala"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Deep Scar Remodeling
                     </div>
                   </div>
@@ -668,12 +670,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
                       alt="Hollywood Carbon Laser Peel Gujranwala"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Pore Shrinking & Radiance
                     </div>
                   </div>
@@ -721,12 +724,13 @@ export default function HomePage() {
               <LuxuryCard className="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md flex flex-col justify-between h-full">
                 <div>
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <AnimatedImage
                       src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
                       alt="Medical Chemical Peels and Melasma Care"
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      className="h-64 rounded-none border-0 shadow-none"
+                      imgClassName="h-64"
                     />
-                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                    <div className="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30 z-10 pointer-events-none">
                       Even Skin Tone
                     </div>
                   </div>

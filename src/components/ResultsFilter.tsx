@@ -140,11 +140,11 @@ export default function ResultsFilter() {
       {/* Category Filter Tabs with layoutId smooth pill indicator */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
         {[
-          { label: "All Cases", value: "all" },
-          { label: "Acne Scars & Texture", value: "scars" },
+          { label: "All Results", value: "all" },
           { label: "Laser Hair Removal", value: "laser" },
-          { label: "HydraFacial Glow", value: "hydrafacial" },
-          { label: "PRP Hair Growth", value: "hair" },
+          { label: "HydraFacial", value: "hydrafacial" },
+          { label: "PRP Hair", value: "hair" },
+          { label: "Acne Scars", value: "scars" },
           { label: "Melasma & Peels", value: "melasma" },
         ].map((tab) => {
           const isActive = activeFilter === tab.value;

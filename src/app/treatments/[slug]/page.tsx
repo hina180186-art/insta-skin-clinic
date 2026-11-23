@@ -23,7 +23,7 @@ import {
   StaggerContainer,
   StaggerItem,
   LuxuryCard,
-  ParallaxImage,
+  AnimatedImage,
 } from "@/components/MotionPrimitives";
 
 type Props = {
@@ -133,114 +133,113 @@ export default async function TreatmentDetailPage({ params }: Props) {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <ParallaxImage offset={20}>
-              <div className="relative h-72 sm:h-96 lg:h-[420px] rounded-3xl overflow-hidden shadow-xl border border-[#B08968]/20 group">
-                <Image
-                  src={treatment.heroImage}
-                  alt={treatment.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 bg-[#FAF8F5]/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 text-[#1F2421]">
-                  <p className="text-xs font-bold uppercase tracking-wider text-[#B08968]">
-                    Insta Skin Clinical Protocol
-                  </p>
-                  <p className="text-xs sm:text-sm font-serif font-bold">
-                    FDA-Approved Devices &bull; Highest Sterilization Hygiene
-                  </p>
-                </div>
+            <AnimatedImage
+              src={treatment.heroImage}
+              alt={treatment.title}
+              className="h-72 sm:h-96 lg:h-[420px]"
+              imgClassName="h-72 sm:h-96 lg:h-[420px]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 bg-[#FAF8F5]/90 backdrop-blur-md p-4 rounded-2xl border border-white/50 text-[#1F2421] pointer-events-none">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#B08968]">
+                  Insta Skin Clinical Protocol
+                </p>
+                <p className="text-xs sm:text-sm font-serif font-bold">
+                  FDA-Approved Devices &bull; Highest Sterilization Hygiene
+                </p>
               </div>
-            </ParallaxImage>
+            </AnimatedImage>
           </div>
         </div>
       </section>
 
-      {/* Quick Specs Bar (4 Columns with Stagger) */}
+      {/* Quick Specs Bar (4 Columns with Stagger & LuxuryCard) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <FadeInUp>
-          <div className="bg-[#F2EDE4] rounded-3xl p-6 sm:p-8 border border-[#B08968]/25 shadow-sm">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-y md:divide-y-0 md:divide-x divide-[#B08968]/20">
-              <div className="pt-4 md:pt-0 md:px-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
-                      Duration
-                    </span>
-                    <p className="font-serif font-bold text-lg text-[#1F2421]">
-                      {treatment.specs.duration}
-                    </p>
-                  </div>
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <StaggerItem>
+            <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-6 border border-[#B08968]/25 shadow-sm h-full flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm shrink-0">
+                  <Clock className="w-5 h-5" />
                 </div>
-                <p className="text-xs text-[#5C5852] pl-1">
-                  {treatment.specs.durationSub}
-                </p>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
+                    Duration
+                  </span>
+                  <p className="font-serif font-bold text-lg text-[#1F2421]">
+                    {treatment.specs.duration}
+                  </p>
+                </div>
               </div>
+              <p className="text-xs text-[#5C5852] pl-1">
+                {treatment.specs.durationSub}
+              </p>
+            </LuxuryCard>
+          </StaggerItem>
 
-              <div className="pt-4 md:pt-0 md:px-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm">
-                    <ShieldCheck className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
-                      Downtime
-                    </span>
-                    <p className="font-serif font-bold text-lg text-[#1F2421]">
-                      {treatment.specs.downtime}
-                    </p>
-                  </div>
+          <StaggerItem>
+            <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-6 border border-[#B08968]/25 shadow-sm h-full flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
                 </div>
-                <p className="text-xs text-[#5C5852] pl-1">
-                  {treatment.specs.downtimeSub}
-                </p>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
+                    Downtime
+                  </span>
+                  <p className="font-serif font-bold text-lg text-[#1F2421]">
+                    {treatment.specs.downtime}
+                  </p>
+                </div>
               </div>
+              <p className="text-xs text-[#5C5852] pl-1">
+                {treatment.specs.downtimeSub}
+              </p>
+            </LuxuryCard>
+          </StaggerItem>
 
-              <div className="pt-4 md:pt-0 md:px-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm">
-                    <Calendar className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
-                      Protocol
-                    </span>
-                    <p className="font-serif font-bold text-lg text-[#1F2421]">
-                      {treatment.specs.sessions}
-                    </p>
-                  </div>
+          <StaggerItem>
+            <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-6 border border-[#B08968]/25 shadow-sm h-full flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#B08968] shadow-sm shrink-0">
+                  <Calendar className="w-5 h-5" />
                 </div>
-                <p className="text-xs text-[#5C5852] pl-1">
-                  {treatment.specs.sessionsSub}
-                </p>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
+                    Protocol
+                  </span>
+                  <p className="font-serif font-bold text-lg text-[#1F2421]">
+                    {treatment.specs.sessions}
+                  </p>
+                </div>
               </div>
+              <p className="text-xs text-[#5C5852] pl-1">
+                {treatment.specs.sessionsSub}
+              </p>
+            </LuxuryCard>
+          </StaggerItem>
 
-              <div className="pt-4 md:pt-0 md:px-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#1E6B52] shadow-sm">
-                    <CheckCircle2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
-                      Results
-                    </span>
-                    <p className="font-serif font-bold text-lg text-[#1E6B52]">
-                      {treatment.specs.results}
-                    </p>
-                  </div>
+          <StaggerItem>
+            <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-6 border border-[#B08968]/25 shadow-sm h-full flex flex-col justify-between">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] flex items-center justify-center text-[#1E6B52] shadow-sm shrink-0">
+                  <CheckCircle2 className="w-5 h-5" />
                 </div>
-                <p className="text-xs text-[#5C5852] pl-1">
-                  {treatment.specs.resultsSub}
-                </p>
+                <div>
+                  <span className="text-xs uppercase tracking-wider text-[#5C5852] font-semibold">
+                    Results
+                  </span>
+                  <p className="font-serif font-bold text-lg text-[#1E6B52]">
+                    {treatment.specs.results}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </FadeInUp>
+              <p className="text-xs text-[#5C5852] pl-1">
+                {treatment.specs.resultsSub}
+              </p>
+            </LuxuryCard>
+          </StaggerItem>
+        </StaggerContainer>
       </section>
 
       {/* Clinical Overview */}
@@ -335,7 +334,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Pre-Care */}
           <FadeInUp delay={0.1}>
-            <div className="bg-[#F2EDE4] rounded-3xl p-8 border border-[#B08968]/20 shadow-sm h-full">
+            <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-8 border border-[#B08968]/20 shadow-sm h-full">
               <h3 className="font-serif font-bold text-2xl text-[#1F2421] mb-6 flex items-center gap-3">
                 <span className="w-9 h-9 rounded-xl bg-[#B08968]/20 text-[#8F6A48] flex items-center justify-center text-sm font-bold">
                   01
@@ -352,12 +351,12 @@ export default async function TreatmentDetailPage({ params }: Props) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </LuxuryCard>
           </FadeInUp>
 
           {/* Post-Care */}
           <FadeInUp delay={0.2}>
-            <div className="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1E6B52]/20 shadow-sm h-full">
+            <LuxuryCard className="bg-[#FAF8F5] rounded-3xl p-8 border border-[#1E6B52]/20 shadow-sm h-full">
               <h3 className="font-serif font-bold text-2xl text-[#1F2421] mb-6 flex items-center gap-3">
                 <span className="w-9 h-9 rounded-xl bg-[#1E6B52]/20 text-[#1E6B52] flex items-center justify-center text-sm font-bold">
                   02
@@ -374,7 +373,7 @@ export default async function TreatmentDetailPage({ params }: Props) {
                   </li>
                 ))}
               </ul>
-            </div>
+            </LuxuryCard>
           </FadeInUp>
         </div>
       </section>

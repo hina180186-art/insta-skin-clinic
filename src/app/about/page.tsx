@@ -14,7 +14,8 @@ import {
   StaggerContainer,
   StaggerItem,
   LuxuryCard,
-  ParallaxImage,
+  AnimatedImage,
+  AnimatedCounter,
 } from "@/components/MotionPrimitives";
 
 export const metadata = {
@@ -88,11 +89,11 @@ export default function AboutPage() {
                 <div className="pt-4 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
-                    <span>Over 15,000 Procedures</span>
+                    <span>Over <AnimatedCounter from={0} to={15000} duration={1.8} suffix="+" /> Procedures</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
-                    <span>4.9 ★ Rating (139 Google Reviews)</span>
+                    <span><AnimatedCounter from={0} to={4.9} decimals={1} suffix=" ★" /> Rating (<AnimatedCounter from={0} to={139} suffix="+" /> Google Reviews)</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-[#1F2421]">
                     <Check className="w-4 h-4 text-[#1E6B52]" />
@@ -103,15 +104,12 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-5 relative">
-              <ParallaxImage offset={20}>
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#B08968]/30 bg-[#F2EDE4]">
-                  <img
-                    src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80"
-                    alt="Insta Skin Clinic Reception and Consultation Ambiance Gujranwala"
-                    className="w-full h-[450px] object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                </div>
-              </ParallaxImage>
+              <AnimatedImage
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80"
+                alt="Insta Skin Clinic Reception and Consultation Ambiance Gujranwala"
+                className="w-full h-[450px]"
+                imgClassName="w-full h-[450px]"
+              />
             </div>
           </div>
         </div>
@@ -142,13 +140,12 @@ export default function AboutPage() {
             <StaggerItem>
               <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-8 border border-[#B08968]/30 shadow-lg h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden border-2 border-[#B08968] shrink-0 shadow-md">
-                    <img
-                      src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
-                      alt="Lead Aesthetic Dermatologist Insta Skin Clinic Gujranwala"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <AnimatedImage
+                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80"
+                    alt="Lead Aesthetic Dermatologist Insta Skin Clinic Gujranwala"
+                    className="w-32 h-32 rounded-2xl shrink-0"
+                    imgClassName="w-32 h-32"
+                  />
                   <div className="space-y-2 text-center sm:text-left">
                     <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#1E6B52]/10 text-[#1E6B52] text-[11px] font-bold">
                       PMDC Verified Practitioner
@@ -184,13 +181,12 @@ export default function AboutPage() {
             <StaggerItem>
               <LuxuryCard className="bg-[#F2EDE4] rounded-3xl p-8 border border-[#B08968]/30 shadow-lg h-full">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden border-2 border-[#B08968] shrink-0 shadow-md">
-                    <img
-                      src="https://images.unsplash.com/photo-1594824813637-4467d58a8a30?auto=format&fit=crop&w=600&q=80"
-                      alt="Senior Clinical Aesthetician Insta Skin Clinic"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <AnimatedImage
+                    src="https://images.unsplash.com/photo-1594824813637-4467d58a8a30?auto=format&fit=crop&w=600&q=80"
+                    alt="Senior Clinical Aesthetician Insta Skin Clinic"
+                    className="w-32 h-32 rounded-2xl shrink-0"
+                    imgClassName="w-32 h-32"
+                  />
                   <div className="space-y-2 text-center sm:text-left">
                     <div className="inline-block px-2.5 py-0.5 rounded-full bg-[#1E6B52]/10 text-[#1E6B52] text-[11px] font-bold">
                       Certified Clinical Aesthetician
