@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insta Skin Clinic | Skin, Laser & Hair Clinic Gujranwala | 4.9 ★</title>
+  <meta name="description" content="Insta Skin Clinic is Gujranwala's premier aesthetic dermatology, medical laser, and hair restoration clinic on Kashmir Rd, Peoples Colony. Rated 4.9 ★ with 139+ Google Reviews.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FAF8F5',
+            sand: '#F2EDE4',
+            espresso: '#1F2421',
+            gold: {
+              DEFAULT: '#B08968',
+              light: '#D8C3A5',
+              subtle: '#EFE8DE',
+              dark: '#8C6848'
+            },
+            emerald: {
+              DEFAULT: '#1E6B52',
+              hover: '#16523F',
+              subtle: '#E8F3EE',
+              dark: '#123D2F'
+            },
+            charcoal: {
+              DEFAULT: '#1F2421',
+              muted: '#5C5852',
+              border: '#37403B'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-[#FAF8F5] text-[#1F2421] font-sans antialiased selection:bg-[#B08968] selection:text-[#FAF8F5]">
+
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#1F2421] text-[#EFE8DE] text-xs py-2.5 px-4 border-b border-[#B08968]/30">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4 text-center sm:text-left">
+        <span class="inline-flex items-center gap-1.5 text-amber-300">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-300 text-amber-300"></i>
+          <strong class="text-white">4.9 ★</strong> (139 Verified Google Reviews)
+        </span>
+        <span class="hidden md:inline text-white/30">•</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-[#EFE8DE]/90">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#B08968]"></i>
+          Kashmir Rd, Sector W Peoples Colony, Gujranwala
+        </span>
+      </div>
+      <div class="flex items-center gap-5">
+        <span class="inline-flex items-center gap-1.5 text-[#EFE8DE]/90">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i>
+          Mon – Sat: 11:00 AM – 9:00 PM
+        </span>
+        <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20inquire%20about%20a%20consultation." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1 transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          +92 300 9353482
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#B08968]/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Clinic Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#B08968] to-[#9A7454] flex items-center justify-center text-[#FAF8F5] shadow-md group-hover:scale-105 transition-transform duration-300">
+          <span class="font-serif font-bold text-xl tracking-tight">IS</span>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#1F2421] block leading-none">INSTA SKIN</span>
+          <span class="text-[10px] sm:text-[11px] tracking-[0.22em] uppercase text-[#5C5852] font-semibold block mt-1">Skin · Laser · Hair Clinic</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-[#1F2421]">
+        <a href="index.html" class="text-[#B08968] font-semibold border-b-2 border-[#B08968] pb-1">Home</a>
+        <a href="about.html" class="hover:text-[#B08968] transition-colors py-1">About Us</a>
+        
+        <!-- Treatments Dropdown -->
+        <div class="relative group py-2">
+          <button class="inline-flex items-center gap-1 hover:text-[#B08968] transition-colors py-1 focus:outline-none">
+            <span>Treatments</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-[#B08968] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 top-full w-72 bg-[#FAF8F5] border border-[#B08968]/30 rounded-xl shadow-2xl p-3 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+            <div class="text-[11px] font-bold tracking-wider uppercase text-[#B08968] px-3 py-1.5">Medical Aesthetic Procedures</div>
+            <a href="treatments/laser-hair-removal.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#B08968] mt-1 shrink-0"></i>
+              <div>
+                <span class="block font-semibold text-sm text-[#1F2421]">Laser Hair Removal</span>
+                <span class="block text-xs text-[#5C5852]">Painless Full Body & Face</span>
+              </div>
+            </a>
+            <a href="treatments/hydrafacial.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <i data-lucide="droplets" class="w-4 h-4 text-[#B08968] mt-1 shrink-0"></i>
+              <div>
+                <span class="block font-semibold text-sm text-[#1F2421]">Signature HydraFacial MD</span>
+                <span class="block text-xs text-[#5C5852]">Deep Pore Vortex Cleansing</span>
+              </div>
+            </a>
+            <a href="treatments/prp-hair-restoration.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <i data-lucide="activity" class="w-4 h-4 text-[#B08968] mt-1 shrink-0"></i>
+              <div>
+                <span class="block font-semibold text-sm text-[#1F2421]">PRP Hair Restoration</span>
+                <span class="block text-xs text-[#5C5852]">Regenerative Growth Therapy</span>
+              </div>
+            </a>
+            <a href="treatments/acne-scar-laser.html" class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <i data-lucide="layers" class="w-4 h-4 text-[#B08968] mt-1 shrink-0"></i>
+              <div>
+                <span class="block font-semibold text-sm text-[#1F2421]">Fractional CO2 Laser</span>
+                <span class="block text-xs text-[#5C5852]">Acne Scars & Texture Reset</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Concerns Dropdown -->
+        <div class="relative group py-2">
+          <button class="inline-flex items-center gap-1 hover:text-[#B08968] transition-colors py-1 focus:outline-none">
+            <span>Concerns</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-[#B08968] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          <div class="absolute left-0 top-full w-64 bg-[#FAF8F5] border border-[#B08968]/30 rounded-xl shadow-2xl p-3 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+            <a href="concerns/hair-fall-thinning.html" class="block p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <span class="block font-semibold text-sm text-[#1F2421]">Hair Fall & Thinning</span>
+              <span class="block text-xs text-[#5C5852]">Alopecia & Scalp Density</span>
+            </a>
+            <a href="concerns/pigmentation-melasma.html" class="block p-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors">
+              <span class="block font-semibold text-sm text-[#1F2421]">Melasma & Dark Spots</span>
+              <span class="block text-xs text-[#5C5852]">Hyperpigmentation Care</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="results.html" class="hover:text-[#B08968] transition-colors py-1">Before & After</a>
+        <a href="contact.html" class="hover:text-[#B08968] transition-colors py-1">Contact & Map</a>
+      </nav>
+
+      <!-- Header CTA & Mobile Hamburger -->
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation%20appointment." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-emerald px-5 py-2.5 text-sm font-semibold tracking-wide">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Book via WhatsApp</span>
+        </a>
+
+        <!-- Hamburger Button -->
+        <button id="mobile-menu-toggle" aria-label="Open Mobile Menu" class="lg:hidden p-2.5 rounded-lg border border-[#B08968]/30 text-[#1F2421] hover:bg-[#F2EDE4] transition-colors">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Slide-over Drawer -->
+  <div id="mobile-drawer-backdrop" class="drawer-backdrop fixed inset-0 bg-black/60 z-50 backdrop-blur-sm"></div>
+  <div id="mobile-drawer-panel" class="drawer-panel fixed top-0 right-0 bottom-0 w-80 max-w-full bg-[#FAF8F5] z-50 shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-[#B08968]/20">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full bg-[#B08968] flex items-center justify-center text-[#FAF8F5] font-serif font-bold text-base">IS</div>
+          <div>
+            <span class="font-serif font-bold text-base text-[#1F2421] block">INSTA SKIN</span>
+            <span class="text-[9px] uppercase tracking-wider text-[#5C5852]">Gujranwala Clinic</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" aria-label="Close Mobile Menu" class="p-2 rounded-lg text-[#5C5852] hover:text-[#1F2421] hover:bg-[#F2EDE4]">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col gap-1 text-base font-medium text-[#1F2421]">
+        <a href="index.html" class="px-3 py-2.5 rounded-lg bg-[#F2EDE4] text-[#B08968] font-semibold flex items-center justify-between">
+          <span>Home</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#B08968]"></i>
+        </a>
+        <a href="about.html" class="px-3 py-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors flex items-center justify-between">
+          <span>About Doctors & Clinic</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#5C5852]"></i>
+        </a>
+        
+        <div class="pt-4 pb-1 px-3 text-xs uppercase font-bold tracking-wider text-[#B08968]">Treatments</div>
+        <a href="treatments/laser-hair-removal.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">Laser Hair Removal</a>
+        <a href="treatments/hydrafacial.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">Signature HydraFacial MD</a>
+        <a href="treatments/prp-hair-restoration.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">PRP Hair Restoration</a>
+        <a href="treatments/acne-scar-laser.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">Fractional CO2 Laser</a>
+
+        <div class="pt-4 pb-1 px-3 text-xs uppercase font-bold tracking-wider text-[#B08968]">Concerns</div>
+        <a href="concerns/hair-fall-thinning.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">Hair Fall & Thinning</a>
+        <a href="concerns/pigmentation-melasma.html" class="px-3 py-2 text-sm hover:bg-[#F2EDE4] rounded-lg text-[#5C5852] hover:text-[#1F2421] pl-6">Melasma & Pigmentation</a>
+
+        <div class="pt-4 pb-1 px-3 text-xs uppercase font-bold tracking-wider text-[#B08968]">Explore</div>
+        <a href="results.html" class="px-3 py-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors flex items-center justify-between">
+          <span>Before & After Results</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#5C5852]"></i>
+        </a>
+        <a href="contact.html" class="px-3 py-2.5 rounded-lg hover:bg-[#F2EDE4] transition-colors flex items-center justify-between">
+          <span>Contact & Clinic Location</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-[#5C5852]"></i>
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-[#B08968]/20 flex flex-col gap-3">
+      <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" class="btn-emerald py-3 text-sm w-full">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>WhatsApp Concierge</span>
+      </a>
+      <div class="text-center text-xs text-[#5C5852]">
+        Kashmir Rd, Peoples Colony, Gujranwala<br>
+        Call: +92 300 9353482
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-[#FAF8F5] via-[#F2EDE4]/40 to-[#FAF8F5]">
+    <!-- Decorative background elements -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-[#B08968]/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-[#1E6B52]/5 blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & CTAs -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Rating Pill Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#F2EDE4] border border-[#B08968]/30 shadow-sm">
+            <span class="flex items-center text-amber-500">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+            </span>
+            <span class="text-xs font-bold text-[#1F2421]">4.9 ★ Rating</span>
+            <span class="text-xs text-[#5C5852]">based on 139 Google Reviews</span>
+          </div>
+
+          <!-- Headline with Line-by-line Mask Reveal -->
+          <div class="space-y-1">
+            <div class="mask-line-container">
+              <h1 class="mask-line-text font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#1F2421] leading-[1.12]">
+                Where Clinical Science
+              </h1>
+            </div>
+            <div class="mask-line-container">
+              <span class="mask-line-text mask-line-text-delay-1 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#B08968] italic leading-[1.12] block">
+                Meets Quiet Luxury.
+              </span>
+            </div>
+          </div>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-[#5C5852] max-w-2xl leading-relaxed">
+            Gujranwala's premier medical aesthetics, laser dermatology, and hair restoration clinic. Directed by certified aesthetic physicians providing FDA-approved clinical technologies in a discrete, tranquil med-spa environment on Kashmir Road.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation%20appointment%20with%20the%20doctor." target="_blank" rel="noopener noreferrer" class="btn-emerald px-8 py-4 text-base font-semibold shadow-lg">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Book Doctor Consultation</span>
+            </a>
+            <button data-open-assessment class="btn-outline-gold px-7 py-4 text-base font-semibold">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-[#B08968]"></i>
+              <span>Quick Skin & Hair Quiz</span>
+            </button>
+          </div>
+
+          <!-- Clinical Guarantees Badges -->
+          <div class="pt-6 border-t border-[#B08968]/20 grid grid-cols-3 gap-4 text-left">
+            <div>
+              <div class="flex items-center gap-1.5 text-xs font-bold text-[#1F2421]">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#B08968]"></i>
+                PMDC Verified
+              </div>
+              <p class="text-[11px] text-[#5C5852] mt-0.5">Certified Medical Doctors</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5 text-xs font-bold text-[#1F2421]">
+                <i data-lucide="zap" class="w-4 h-4 text-[#B08968]"></i>
+                FDA-Approved
+              </div>
+              <p class="text-[11px] text-[#5C5852] mt-0.5">Gold Standard Laser Systems</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5 text-xs font-bold text-[#1F2421]">
+                <i data-lucide="sparkles" class="w-4 h-4 text-[#B08968]"></i>
+                100% Sterile
+              </div>
+              <p class="text-[11px] text-[#5C5852] mt-0.5">Medical Spa Hygiene Protocols</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Composition with Parallax & Scale Settle -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Main Hero Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#B08968]/30 bg-[#F2EDE4]">
+              <img 
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" 
+                alt="Insta Skin Clinic Gujranwala State-of-the-Art Treatment Suite" 
+                class="w-full h-[480px] object-cover hero-image-settle"
+                data-parallax="0.08"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-[#1F2421]/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <span class="inline-block px-2.5 py-1 rounded bg-[#B08968] text-white text-[11px] font-bold uppercase tracking-wider mb-1">Clinic Ambiance</span>
+                <p class="font-serif text-lg font-semibold text-[#FAF8F5]">Kashmir Rd, Sector W Peoples Colony</p>
+                <p class="text-xs text-[#EFE8DE]/80">Designed for ultimate privacy, safety, and comfort.</p>
+              </div>
+            </div>
+
+            <!-- Floating Mini Card 1: 15,000+ Procedures -->
+            <div class="absolute -bottom-6 -left-6 bg-[#FAF8F5] border border-[#B08968]/40 rounded-2xl p-4 shadow-xl max-w-[210px] hidden sm:block animate-pulse duration-1000">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#1E6B52]/10 text-[#1E6B52] flex items-center justify-center font-bold">
+                  <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="font-serif font-bold text-lg text-[#1F2421] leading-none" data-counter="15000" data-suffix="+">15,000+</div>
+                  <div class="text-[11px] text-[#5C5852] mt-0.5">Satisfied Gujranwala Patients</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Mini Card 2: Top Rated Clinic -->
+            <div class="absolute -top-6 -right-4 bg-[#FAF8F5] border border-[#B08968]/40 rounded-2xl p-4 shadow-xl hidden sm:flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                <i data-lucide="award" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-[#1F2421]">Gujranwala's Choice</div>
+                <div class="text-[11px] text-[#5C5852]">4.9 ★ (139 Reviews)</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Bar -->
+  <section class="bg-[#1F2421] text-[#FAF8F5] py-10 border-y border-[#B08968]/20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-[#B08968]/20">
+        
+        <div class="p-4">
+          <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]" data-counter="4.9" data-suffix=" ★">
+            4.9 ★
+          </div>
+          <p class="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">Google Rating</p>
+          <span class="text-[11px] text-[#B08968]">139 Verified Reviews</span>
+        </div>
+
+        <div class="p-4">
+          <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]" data-counter="15000" data-suffix="+">
+            15,000+
+          </div>
+          <p class="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">Procedures Completed</p>
+          <span class="text-[11px] text-[#B08968]">Skin, Hair & Laser</span>
+        </div>
+
+        <div class="p-4">
+          <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]" data-counter="10" data-suffix="+">
+            10+
+          </div>
+          <p class="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">Years Clinical Mastery</p>
+          <span class="text-[11px] text-[#B08968]">PMDC Certified Doctors</span>
+        </div>
+
+        <div class="p-4">
+          <div class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#D8C3A5]" data-counter="100" data-suffix="%">
+            100%
+          </div>
+          <p class="text-xs sm:text-sm text-[#EFE8DE]/80 mt-1 uppercase tracking-wider font-medium">FDA-Approved Lasers</p>
+          <span class="text-[11px] text-[#B08968]">Zero Compromise Safety</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Browse by Concern Section -->
+  <section class="py-20 lg:py-28 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-fade-up">
+        <span class="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">Personalized Dermatology</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">Browse by Your Concern</h2>
+        <div class="w-16 h-0.5 bg-[#B08968] mx-auto my-4"></div>
+        <p class="text-[#5C5852] text-base">Select your primary concern to discover our customized medical protocols designed specifically for South Asian skin and hair biology.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Concern Card 1 -->
+        <a href="concerns/hair-fall-thinning.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Hair Fall & Thinning</h3>
+          <p class="text-sm text-[#5C5852] mb-4">Crown thinning, male/female pattern alopecia, and postpartum hair loss addressed with regenerative PRP & exosome therapies.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Explore Hair Restoration Protocols</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- Concern Card 2 -->
+        <a href="concerns/pigmentation-melasma.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up delay-100">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="sun" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Melasma & Dark Spots</h3>
+          <p class="text-sm text-[#5C5852] mb-4">Stubborn dermal melasma, sun freckles, and post-inflammatory hyperpigmentation safely targeted with specialized Q-switched lasers and medical peels.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Explore Pigmentation Protocols</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- Concern Card 3 -->
+        <a href="treatments/acne-scar-laser.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up delay-200">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Acne Scars & Texture</h3>
+          <p class="text-sm text-[#5C5852] mb-4">Rolling, boxcar, and icepick scars resurfaced via Fractional CO2 laser ablation combined with subcision and collagen stimulation.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Explore Acne Laser Protocols</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- Concern Card 4 -->
+        <a href="treatments/laser-hair-removal.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Unwanted Facial & Body Hair</h3>
+          <p class="text-sm text-[#5C5852] mb-4">PCOS-induced facial hirsutism, full body, underarms, and beard contouring with painless contact-cooled triple wavelength laser technology.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Explore Laser Hair Packages</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- Concern Card 5 -->
+        <a href="treatments/hydrafacial.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up delay-100">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="droplets" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Dull & Congested Skin</h3>
+          <p class="text-sm text-[#5C5852] mb-4">Clogged pores, stubborn blackheads, and environmental pollution damage clarified instantly with signature Medical HydraFacial MD infusion.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Explore HydraFacial Experience</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+        <!-- Concern Card 6 -->
+        <a href="contact.html" class="luxury-card rounded-2xl p-7 block group relative overflow-hidden reveal-fade-up delay-200">
+          <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#1F2421] mb-2 group-hover:text-[#B08968] transition-colors">Custom Doctor Assessment</h3>
+          <p class="text-sm text-[#5C5852] mb-4">Unsure which protocol fits your skin type? Meet with our clinical doctors for a comprehensive dermatological skin analysis on Kashmir Road.</p>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-[#B08968] group-hover:translate-x-1 transition-transform">
+            <span>Book Clinic Consultation</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Treatments Grid -->
+  <section class="py-20 lg:py-28 bg-[#F2EDE4]/60 border-t border-[#B08968]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 reveal-fade-up">
+        <div>
+          <span class="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">Our Signature Procedures</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">Clinical Treatments</h2>
+        </div>
+        <p class="text-sm sm:text-base text-[#5C5852] max-w-md">
+          Administered exclusively with international FDA-cleared devices and medically backed regenerative serums.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Treatment 1: Laser Hair Removal -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=800&q=80" 
+                alt="Triple Wavelength Laser Hair Removal Gujranwala" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Painless Ice-Cooling
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 30–60 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> 6–8 Sessions</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">Laser Hair Removal</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                State-of-the-art Alexandrite, Diode & Nd:YAG triple wavelength laser for permanent reduction on all Pakistani skin tones with sub-zero chilled sapphire tips.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="treatments/laser-hair-removal.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>View Treatment Guide</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20am%20inquiring%20about%20Laser%20Hair%20Removal%20packages." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Treatment 2: Signature HydraFacial MD -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up delay-100">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1512290900672-1f0236a28189?auto=format&fit=crop&w=800&q=80" 
+                alt="Signature Medical HydraFacial MD at Insta Skin Clinic" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Zero Downtime Glow
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 45–60 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> Monthly Maintenance</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">Signature HydraFacial MD</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                Patented 4-step Vortex-Fusion technology: deep cleanse, chemical peel exfoliation, painless vacuum extraction, and intense hyaluronic hydration infusion.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="treatments/hydrafacial.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>View Treatment Guide</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20book%20a%20Signature%20HydraFacial%20MD%20session." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Treatment 3: PRP Hair Restoration -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up delay-200">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1585751119414-ef2636f8aede?auto=format&fit=crop&w=800&q=80" 
+                alt="PRP Scalp & Hair Restoration Therapy Gujranwala" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Autologous Growth Factors
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 45 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> 4–6 Sessions</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">PRP Hair Restoration</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                High-concentration Platelet-Rich Plasma microinjected directly into dormant follicles to halt thinning, reverse miniaturization, and spark new density.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="treatments/prp-hair-restoration.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>View Treatment Guide</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20inquire%20about%20PRP%20Hair%20Therapy." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Treatment 4: Fractional CO2 Laser -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" 
+                alt="Fractional CO2 Laser for Acne Scars Gujranwala" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Deep Scar Remodeling
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 60 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> 3–5 Sessions</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">Fractional CO2 Resurfacing</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                Micro-ablative fractional carbon dioxide laser precisely breaks fibrotic scar tissue, tightening enlarged pores and inducing massive neocollagenesis.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="treatments/acne-scar-laser.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>View Treatment Guide</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20am%20interested%20in%20Fractional%20CO2%20Laser%20for%20Acne%20Scars." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Treatment 5: Hollywood Carbon Peel -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up delay-100">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" 
+                alt="Hollywood Carbon Laser Peel Gujranwala" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Pore Shrinking & Radiance
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 45 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> 3–4 Sessions</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">Carbon Laser Peel</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                Activated liquid carbon paste blasted with Q-switched Nd:YAG laser. Clears deep trapped sebum, refines stubborn pore texture, and delivers instant red-carpet brightness.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="contact.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>Book Appointment</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20want%20to%20book%20a%20Carbon%20Laser%20Peel." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Treatment 6: Targeted Melasma & Chemical Peels -->
+        <div class="bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#B08968]/30 shadow-md luxury-card flex flex-col justify-between reveal-fade-up delay-200">
+          <div>
+            <div class="relative h-64 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80" 
+                alt="Medical Chemical Peels and Melasma Care" 
+                class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              >
+              <div class="absolute top-4 left-4 bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-semibold px-3 py-1 rounded-full border border-[#B08968]/30">
+                Even Skin Tone
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-[#5C5852] mb-2">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-[#B08968]"></i> 30 Mins</span>
+                <span class="flex items-center gap-1"><i data-lucide="repeat" class="w-3.5 h-3.5 text-[#B08968]"></i> 3–6 Sessions</span>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-[#1F2421] mb-2">Dermatological Peels</h3>
+              <p class="text-sm text-[#5C5852] leading-relaxed mb-4">
+                Physician-strength TCA, Glycolic, Mandelic, and modified Jessner cocktails that safely eliminate stubborn hyperpigmentation without post-inflammatory rebound.
+              </p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-[#B08968]/15 mt-2">
+            <a href="concerns/pigmentation-melasma.html" class="text-sm font-bold text-[#B08968] hover:text-[#9A7454] inline-flex items-center gap-1">
+              <span>View Pigmentation Guide</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20am%20consulting%20regarding%20Melasma%20Chemical%20Peels." target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 text-sm font-semibold inline-flex items-center gap-1">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Draggable Before & After Comparison Showcase -->
+  <section class="py-20 lg:py-28 bg-[#FAF8F5] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Context & Explanation -->
+        <div class="lg:col-span-5 space-y-6 reveal-fade-up">
+          <span class="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block">Verified Clinical Transformation</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
+            Interactive Before & After
+          </h2>
+          <p class="text-[#5C5852] leading-relaxed">
+            Drag the golden divider left or right to inspect the dramatic epidermal regeneration achieved with our specialized Fractional CO2 Laser & PRP protocol on Kashmir Road.
+          </p>
+
+          <div class="bg-[#F2EDE4] p-5 rounded-2xl border border-[#B08968]/30 space-y-3">
+            <div class="text-xs font-bold text-[#1F2421] uppercase tracking-wider flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-[#1E6B52]"></i>
+              Case Study: Deep Acne Scars & Enlarged Pores
+            </div>
+            <div class="grid grid-cols-2 gap-3 text-xs text-[#5C5852]">
+              <div><strong>Protocol:</strong> 4x Fractional CO2 + PRP</div>
+              <div><strong>Interval:</strong> 4 Weeks Apart</div>
+              <div><strong>Downtime:</strong> 3–4 Days Mild Pinkness</div>
+              <div><strong>Patient Age:</strong> 26 (Gujranwala)</div>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center gap-4">
+            <a href="results.html" class="btn-gold px-6 py-3.5 text-sm font-semibold w-full sm:w-auto">
+              <span>View Full Gallery (15+ Cases)</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20saw%20your%20Before%20and%20After%20results%20and%20want%20to%20know%20if%20my%20scars%20can%20be%20treated." target="_blank" rel="noopener noreferrer" class="btn-outline-gold px-6 py-3.5 text-sm font-semibold w-full sm:w-auto">
+              <i data-lucide="message-circle" class="w-4 h-4 text-[#1E6B52]"></i>
+              <span>Ask Doctor About Scars</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Draggable Slider -->
+        <div class="lg:col-span-7">
+          <div class="relative bg-[#F2EDE4] p-3 rounded-3xl border-2 border-[#B08968]/30 shadow-2xl">
+            
+            <!-- Draggable Container -->
+            <div class="ba-container h-[420px] sm:h-[480px]">
+              
+              <!-- After Image (Base) -->
+              <img 
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80" 
+                alt="After Clinical Treatment Smooth Skin Result" 
+                class="ba-after-image"
+              >
+              
+              <!-- Before Image (Clipped) -->
+              <img 
+                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80" 
+                alt="Before Clinical Treatment Skin Condition" 
+                class="ba-before-image"
+              >
+
+              <!-- Drag Handle with Gold Divider Line -->
+              <div class="ba-handle">
+                <div class="ba-handle-button">
+                  <i data-lucide="chevrons-left-right" class="w-5 h-5 text-[#B08968]"></i>
+                </div>
+              </div>
+
+              <!-- Static Labels -->
+              <div class="absolute top-4 left-4 z-10 pointer-events-none bg-[#1F2421]/80 backdrop-blur-md text-[#FAF8F5] text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-white/20">
+                Before Treatment
+              </div>
+              <div class="absolute top-4 right-4 z-10 pointer-events-none bg-[#1E6B52]/90 backdrop-blur-md text-[#FAF8F5] text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full border border-white/20">
+                After 4 Sessions
+              </div>
+
+            </div>
+
+            <p class="text-center text-xs text-[#5C5852] mt-3">
+              <i data-lucide="touchpad" class="w-3.5 h-3.5 inline text-[#B08968] mr-1"></i>
+              Interactive: Click and drag slider left/right to compare
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Infinite Google Reviews Marquee -->
+  <section class="py-20 bg-[#1F2421] text-[#FAF8F5] overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF8F5]/10 border border-[#B08968]/40 mb-3">
+        <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+        <span class="text-xs font-bold text-[#EFE8DE]">Google Rating 4.9 ★ (139 Verified Reviews)</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#FAF8F5]">Real Voices from Gujranwala</h2>
+      <p class="text-sm text-[#EFE8DE]/70 mt-2 max-w-xl mx-auto">
+        Read authentic patient experiences from Kashmir Road, Peoples Colony. Hover cursor over any review to pause.
+      </p>
+    </div>
+
+    <!-- Marquee Track Wrapper -->
+    <div class="relative w-full overflow-hidden py-4">
+      
+      <!-- Gradient Edge Masks -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#1F2421] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#1F2421] to-transparent z-10 pointer-events-none"></div>
+
+      <!-- Moving Track (Duplicated for Seamless Infinite Loop) -->
+      <div class="marquee-track flex gap-6">
+        
+        <!-- Review Card 1 -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "Best laser clinic in Gujranwala without a doubt! I took 6 sessions of laser hair removal on Kashmir Rd. The staff is so gentle and the machine has zero pain. My skin is completely smooth now."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              FA
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Fatima Aslam</div>
+              <div class="text-[11px] text-[#B08968]">Laser Hair Removal Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "I had severe acne scars from college days. The doctor evaluated my skin thoroughly and recommended 4 sessions of Fractional CO2 laser with PRP. The results are unbelievable. My scars are 80% filled."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              UB
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Usman Bilal</div>
+              <div class="text-[11px] text-[#B08968]">Fractional CO2 Laser Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "Got their Signature HydraFacial before my wedding. The clinic is spotless, smells like a luxury spa in Lahore or Dubai, and my skin glowed for 3 weeks straight! Highly recommended to every bride."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              ZQ
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Zainab Qureshi</div>
+              <div class="text-[11px] text-[#B08968]">HydraFacial MD Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 4 -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "Suffered from crown hair thinning. Started PRP sessions here 3 months ago. The doctor takes blood under complete sterile conditions. Hair shedding stopped completely and new baby hair is coming."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              HR
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Hamza Riaz</div>
+              <div class="text-[11px] text-[#B08968]">PRP Hair Restoration</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Card 5 -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "Honest advice and genuine FDA machines. Most salons in Gujranwala use cheap Chinese lasers that burn skin. Insta Skin Clinic is fully professional with certified doctors. 5 stars well deserved."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              SK
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Dr. Sarah Khan</div>
+              <div class="text-[11px] text-[#B08968]">Medical Colleague & Patient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clone for infinite loop -->
+        <div class="w-[360px] bg-[#272E2A] p-6 rounded-2xl border border-[#B08968]/30 shrink-0 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="flex text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              </div>
+              <span class="text-[11px] text-[#B08968] font-semibold">Google Review</span>
+            </div>
+            <p class="text-sm text-[#EFE8DE]/90 leading-relaxed italic">
+              "Best laser clinic in Gujranwala without a doubt! I took 6 sessions of laser hair removal on Kashmir Rd. The staff is so gentle and the machine has zero pain. My skin is completely smooth now."
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-[#B08968]/20 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#B08968]/20 text-[#D8C3A5] font-bold flex items-center justify-center text-xs">
+              FA
+            </div>
+            <div>
+              <div class="text-sm font-bold text-white">Fatima Aslam</div>
+              <div class="text-[11px] text-[#B08968]">Laser Hair Removal Patient</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- The Insta Skin Difference (Why Us) -->
+  <section class="py-20 lg:py-28 bg-[#FAF8F5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6 reveal-fade-up">
+          <span class="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block">Clinical Rigor & Ethics</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1F2421]">
+            Why Discerning Patients Choose Insta Skin Clinic
+          </h2>
+          <p class="text-[#5C5852] leading-relaxed">
+            In an unregulated aesthetic market, Insta Skin Clinic operates under strict hospital-grade medical standards. Every protocol is customized for Pakistani melanin profiles to guarantee efficacy while avoiding burns or hyperpigmentation.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#F2EDE4]/70 border border-[#B08968]/20">
+              <div class="w-10 h-10 rounded-xl bg-[#B08968] text-white flex items-center justify-center shrink-0">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#1F2421]">Doctor-Led Consultations</h4>
+                <p class="text-xs text-[#5C5852] mt-0.5">Every assessment and critical laser wavelength setting is determined by PMDC licensed doctors, never uncertified technicians.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#F2EDE4]/70 border border-[#B08968]/20">
+              <div class="w-10 h-10 rounded-xl bg-[#1E6B52] text-white flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#1F2421]">Medical Grade Sterilization</h4>
+                <p class="text-xs text-[#5C5852] mt-0.5">Class-B medical autoclave sterilization for all reusable handpieces and vacuum tips. 100% single-use disposable consumables.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 p-4 rounded-2xl bg-[#F2EDE4]/70 border border-[#B08968]/20">
+              <div class="w-10 h-10 rounded-xl bg-[#1F2421] text-white flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-base text-[#1F2421]">Prime Kashmir Road Location</h4>
+                <p class="text-xs text-[#5C5852] mt-0.5">Centrally located in Sector W, Peoples Colony, Gujranwala with private dedicated parking and quiet spa privacy.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4">
+            <a href="about.html" class="btn-gold px-8 py-3.5 text-sm font-semibold">
+              <span>Learn About Our Doctors & Standards</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#B08968]/30">
+              <img 
+                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80" 
+                alt="Insta Skin Clinic Doctor Consultation Gujranwala" 
+                class="w-full h-[500px] object-cover"
+                data-parallax="0.06"
+              >
+            </div>
+            
+            <div class="absolute -bottom-6 -right-6 bg-[#FAF8F5] border border-[#B08968]/40 p-5 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+              <div class="flex items-center gap-3 mb-2">
+                <i data-lucide="clock" class="w-5 h-5 text-[#B08968]"></i>
+                <span class="font-serif font-bold text-sm text-[#1F2421]">Clinic Timings</span>
+              </div>
+              <p class="text-xs text-[#5C5852]">Mon – Sat: 11:00 AM – 9:00 PM</p>
+              <p class="text-xs text-[#B08968] font-semibold mt-0.5">Sunday: By Exclusive Appointment</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Location, Map & Hours Section -->
+  <section class="py-20 bg-[#F2EDE4]/60 border-t border-[#B08968]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-fade-up">
+        <span class="text-xs uppercase font-bold tracking-[0.25em] text-[#B08968] block mb-2">Visit Our Gujranwala Clinic</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">Location & Clinic Hours</h2>
+        <div class="w-16 h-0.5 bg-[#B08968] mx-auto my-4"></div>
+        <p class="text-sm text-[#5C5852]">Conveniently situated in Sector W, Peoples Colony on Kashmir Road. Easy access with valet and private parking.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Info Cards -->
+        <div class="lg:col-span-5 space-y-5">
+          
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#B08968]/30 shadow-sm space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#B08968]/15 text-[#B08968] flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-[#1F2421]">Clinic Address</h4>
+                <p class="text-sm text-[#5C5852] mt-1 leading-relaxed">
+                  Kashmir Rd, Sector W Peoples Colony, Gujranwala, Punjab 52250, Pakistan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#B08968]/30 shadow-sm space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#1E6B52]/15 text-[#1E6B52] flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div class="w-full">
+                <h4 class="font-serif font-bold text-lg text-[#1F2421]">Operating Hours</h4>
+                <div class="mt-2 space-y-1 text-sm text-[#5C5852]">
+                  <div class="flex justify-between border-b border-[#B08968]/15 pb-1">
+                    <span>Monday – Saturday:</span>
+                    <strong class="text-[#1F2421]">11:00 AM – 9:00 PM</strong>
+                  </div>
+                  <div class="flex justify-between pt-1">
+                    <span>Sunday:</span>
+                    <strong class="text-[#B08968]">By Appointment Only</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#B08968]/30 shadow-sm space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-[#1E6B52]/15 text-[#1E6B52] flex items-center justify-center shrink-0">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-lg text-[#1F2421]">Direct Contact</h4>
+                <p class="text-xs text-[#5C5852] mt-0.5">Call or WhatsApp our patient coordination desk.</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <a href="tel:+923009353482" class="btn-outline-gold px-4 py-2 text-xs font-bold">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i> Call +92 300 9353482
+                  </a>
+                  <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20directions%20and%20consultation%20timings." target="_blank" rel="noopener noreferrer" class="btn-emerald px-4 py-2 text-xs font-bold">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp Desk
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="lg:col-span-7">
+          <div class="h-full min-h-[380px] rounded-3xl overflow-hidden border-2 border-[#B08968]/30 shadow-xl relative bg-[#FAF8F5]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3377.1633519539356!2d74.1923292!3d32.1728282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f298cb3d21b71%3A0xe552ff90df111718!2sPeoples%20Colony%2C%20Gujranwala%2C%20Punjab!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+              class="w-full h-full min-h-[380px] border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Insta Skin Clinic Kashmir Rd Peoples Colony Gujranwala Map"
+            ></iframe>
+            
+            <div class="absolute bottom-4 right-4 bg-[#FAF8F5]/95 backdrop-blur-md px-4 py-2 rounded-xl border border-[#B08968]/40 shadow-lg text-xs font-bold text-[#1F2421] hidden sm:block">
+              Sector W, Peoples Colony, Gujranwala
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="py-16 bg-gradient-to-r from-[#1F2421] via-[#2A312C] to-[#1F2421] text-[#FAF8F5] relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern-subtle opacity-20 pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+      <span class="inline-block px-3 py-1 rounded-full bg-[#B08968]/20 border border-[#B08968]/40 text-[#D8C3A5] text-xs font-bold uppercase tracking-wider">
+        Private Consultations Daily
+      </span>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        Begin Your Skin & Hair Transformation Today
+      </h2>
+      <p class="text-sm sm:text-base text-[#EFE8DE]/80 max-w-2xl mx-auto">
+        Speak directly with our clinical coordinators on WhatsApp to schedule an in-depth dermatological analysis at our Gujranwala clinic.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20would%20like%20to%20schedule%20an%20appointment%20with%20the%20doctor." target="_blank" rel="noopener noreferrer" class="btn-emerald px-8 py-4 text-base font-semibold shadow-xl w-full sm:w-auto">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Schedule on WhatsApp (+92 300 9353482)</span>
+        </a>
+        <button data-open-assessment class="btn-gold px-8 py-4 text-base font-semibold shadow-xl w-full sm:w-auto">
+          <i data-lucide="help-circle" class="w-5 h-5"></i>
+          <span>Take 60-Sec Skin Quiz</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer class="bg-[#1F2421] text-[#EFE8DE] pt-20 pb-12 border-t border-[#B08968]/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-[#B08968]/20">
+        
+        <!-- Col 1: Brand & Credentials -->
+        <div class="lg:col-span-4 space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#B08968] flex items-center justify-center text-[#FAF8F5] font-serif font-bold text-lg">IS</div>
+            <div>
+              <span class="font-serif text-xl font-bold tracking-tight text-[#FAF8F5] block">INSTA SKIN CLINIC</span>
+              <span class="text-[10px] tracking-[0.2em] uppercase text-[#D8C3A5]">Skin · Laser · Hair Clinic</span>
+            </div>
+          </div>
+          
+          <p class="text-xs text-[#EFE8DE]/70 leading-relaxed">
+            Gujranwala's premier aesthetic dermatology center combining medical science with quiet luxury. Providing FDA-approved laser hair removal, medical HydraFacial MD, PRP hair restoration, and Fractional CO2 acne scar therapy.
+          </p>
+
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FAF8F5]/5 border border-[#B08968]/30 text-xs">
+            <span class="text-amber-400">★ 4.9</span>
+            <span class="text-[#EFE8DE]/80">139 Verified Google Reviews</span>
+          </div>
+
+          <div class="flex items-center gap-3 text-xs text-[#B08968]">
+            <span class="flex items-center gap-1"><i data-lucide="shield" class="w-3.5 h-3.5"></i> PMDC Registered</span>
+            <span>•</span>
+            <span class="flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> FDA Approved</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="font-serif font-bold text-sm text-[#D8C3A5] tracking-wider uppercase">Navigation</h4>
+          <ul class="space-y-2.5 text-xs text-[#EFE8DE]/75">
+            <li><a href="index.html" class="hover:text-[#B08968] transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#B08968] transition-colors">About Doctors & Clinic</a></li>
+            <li><a href="results.html" class="hover:text-[#B08968] transition-colors">Before & After Results</a></li>
+            <li><a href="contact.html" class="hover:text-[#B08968] transition-colors">Contact & Location</a></li>
+            <li><a href="concerns/hair-fall-thinning.html" class="hover:text-[#B08968] transition-colors">Hair Fall Guide</a></li>
+            <li><a href="concerns/pigmentation-melasma.html" class="hover:text-[#B08968] transition-colors">Melasma Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Medical Treatments -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-serif font-bold text-sm text-[#D8C3A5] tracking-wider uppercase">Medical Procedures</h4>
+          <ul class="space-y-2.5 text-xs text-[#EFE8DE]/75">
+            <li><a href="treatments/laser-hair-removal.html" class="hover:text-[#B08968] transition-colors">Triple-Wavelength Laser Hair Removal</a></li>
+            <li><a href="treatments/hydrafacial.html" class="hover:text-[#B08968] transition-colors">Signature Medical HydraFacial MD</a></li>
+            <li><a href="treatments/prp-hair-restoration.html" class="hover:text-[#B08968] transition-colors">Autologous PRP Hair Restoration</a></li>
+            <li><a href="treatments/acne-scar-laser.html" class="hover:text-[#B08968] transition-colors">Fractional CO2 Laser Resurfacing</a></li>
+            <li><a href="contact.html" class="hover:text-[#B08968] transition-colors">Hollywood Carbon Laser Peel</a></li>
+            <li><a href="contact.html" class="hover:text-[#B08968] transition-colors">Targeted Medical Chemical Peels</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Gujranwala Clinic Info -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-serif font-bold text-sm text-[#D8C3A5] tracking-wider uppercase">Gujranwala Clinic</h4>
+          <div class="space-y-3 text-xs text-[#EFE8DE]/75">
+            <p class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#B08968] shrink-0 mt-0.5"></i>
+              <span>Kashmir Rd, Sector W Peoples Colony, Gujranwala, 52250, Pakistan</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-[#B08968] shrink-0"></i>
+              <a href="tel:+923009353482" class="hover:text-[#B08968] transition-colors">+92 300 9353482</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <a href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20am%20messaging%20via%20your%20website." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline">+92 300 9353482 (WhatsApp)</a>
+            </p>
+            <p class="flex items-start gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-[#B08968] shrink-0 mt-0.5"></i>
+              <span>Mon – Sat: 11:00 AM – 9:00 PM<br><span class="text-[#D8C3A5]">Sunday: By Appointment Only</span></span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EFE8DE]/50">
+        <p>© 2026 Insta Skin Clinic (Skin Laser & Hair Clinic). All rights reserved.</p>
+        <p class="text-[11px] text-[#EFE8DE]/40 text-center sm:text-right">
+          Disclaimer: Clinical results vary based on individual skin physiology and compliance with medical instructions.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Concierge Button with Ambient Pulse Ring -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+    <div class="hidden md:flex bg-[#1F2421]/90 backdrop-blur-md text-[#FAF8F5] text-xs font-medium py-1.5 px-3 rounded-full border border-[#B08968]/30 shadow-lg items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Doctor Available On WhatsApp</span>
+    </div>
+    <button 
+      data-open-assessment
+      aria-label="Open Quick Skin & Hair Assessment"
+      class="relative w-14 h-14 rounded-full bg-[#1E6B52] hover:bg-[#16523F] text-white flex items-center justify-center shadow-2xl transition-transform hover:scale-110 ambient-pulse-ring focus:outline-none"
+    >
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </button>
+  </div>
+
+  <!-- Slide-Over Quick Skin & Hair Assessment Drawer -->
+  <div id="assessment-drawer-backdrop" class="drawer-backdrop fixed inset-0 bg-black/60 z-50 backdrop-blur-sm"></div>
+  <div id="assessment-drawer-panel" class="drawer-panel fixed top-0 right-0 bottom-0 w-full sm:w-[450px] bg-[#FAF8F5] z-50 shadow-2xl flex flex-col justify-between p-6 sm:p-8 overflow-y-auto">
+    
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-[#B08968]/20">
+        <div>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-[#B08968] block">Instant Clinical Concierge</span>
+          <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#1F2421]">Skin & Hair Assessment</h3>
+        </div>
+        <button id="assessment-drawer-close" aria-label="Close Assessment Drawer" class="p-2 rounded-lg text-[#5C5852] hover:text-[#1F2421] hover:bg-[#F2EDE4]">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <p class="text-xs text-[#5C5852] mt-4 mb-6 leading-relaxed">
+        Select your areas of interest below. Our system will format a priority consultation request directly to our clinical WhatsApp desk at +92 300 9353482.
+      </p>
+
+      <form id="quick-assessment-form" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#1F2421] mb-1">Your Name</label>
+          <input 
+            type="text" 
+            name="patient_name" 
+            placeholder="e.g. Ayesha Khan" 
+            required 
+            class="w-full px-4 py-2.5 rounded-xl border border-[#B08968]/30 bg-white text-sm text-[#1F2421] focus:outline-none focus:border-[#B08968] focus:ring-1 focus:ring-[#B08968]"
+          >
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#1F2421] mb-1">Primary Concern</label>
+          <select 
+            name="concern" 
+            class="w-full px-4 py-2.5 rounded-xl border border-[#B08968]/30 bg-white text-sm text-[#1F2421] focus:outline-none focus:border-[#B08968] focus:ring-1 focus:ring-[#B08968]"
+          >
+            <option value="Laser Hair Removal (Full Body / Face)">Laser Hair Removal (Full Body / Face)</option>
+            <option value="Acne Scars & Texture (Fractional CO2)">Acne Scars & Texture (Fractional CO2)</option>
+            <option value="Signature HydraFacial MD (Pore Glow)">Signature HydraFacial MD (Pore Glow)</option>
+            <option value="PRP Hair Restoration (Thinning / Shedding)">PRP Hair Restoration (Thinning / Shedding)</option>
+            <option value="Melasma & Hyperpigmentation">Melasma & Hyperpigmentation</option>
+            <option value="Hollywood Carbon Laser Peel">Hollywood Carbon Laser Peel</option>
+            <option value="General Doctor Dermatology Consultation">General Doctor Dermatology Consultation</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#1F2421] mb-1">Treatment Area</label>
+          <select 
+            name="treatment_area" 
+            class="w-full px-4 py-2.5 rounded-xl border border-[#B08968]/30 bg-white text-sm text-[#1F2421] focus:outline-none focus:border-[#B08968] focus:ring-1 focus:ring-[#B08968]"
+          >
+            <option value="Full Face & Neck">Full Face & Neck</option>
+            <option value="Cheeks & Forehead">Cheeks & Forehead</option>
+            <option value="Scalp & Crown (Hair)">Scalp & Crown (Hair)</option>
+            <option value="Full Body Laser">Full Body Laser</option>
+            <option value="Underarms & Arms">Underarms & Arms</option>
+            <option value="Beard Line / Neck (Men)">Beard Line / Neck (Men)</option>
+            <option value="Back / Shoulders">Back / Shoulders</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#1F2421] mb-1">Preferred Time for Visit</label>
+          <select 
+            name="preferred_time" 
+            class="w-full px-4 py-2.5 rounded-xl border border-[#B08968]/30 bg-white text-sm text-[#1F2421] focus:outline-none focus:border-[#B08968] focus:ring-1 focus:ring-[#B08968]"
+          >
+            <option value="Afternoon (11:00 AM – 3:00 PM)">Afternoon (11:00 AM – 3:00 PM)</option>
+            <option value="Late Afternoon (3:00 PM – 6:00 PM)">Late Afternoon (3:00 PM – 6:00 PM)</option>
+            <option value="Evening (6:00 PM – 9:00 PM)">Evening (6:00 PM – 9:00 PM)</option>
+            <option value="Sunday By Appointment">Sunday By Appointment</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-[#1F2421] mb-1">Notes / Previous Treatments</label>
+          <textarea 
+            name="notes" 
+            rows="2" 
+            placeholder="Any allergies, previous chemical peels or lasers..."
+            class="w-full px-4 py-2 rounded-xl border border-[#B08968]/30 bg-white text-sm text-[#1F2421] focus:outline-none focus:border-[#B08968] focus:ring-1 focus:ring-[#B08968]"
+          ></textarea>
+        </div>
+
+        <button 
+          type="submit" 
+          class="btn-emerald w-full py-3.5 text-sm font-bold shadow-lg mt-2"
+        >
+          <i data-lucide="send" class="w-4 h-4"></i>
+          <span>Send Details to WhatsApp Desk</span>
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-6 pt-4 border-t border-[#B08968]/20 text-center">
+      <div class="text-[11px] text-[#5C5852]">
+        Insta Skin Clinic • Kashmir Rd, Sector W Peoples Colony, Gujranwala<br>
+        Direct Desk: <a href="tel:+923009353482" class="text-[#B08968] font-bold">+92 300 9353482</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Script Engine -->
+  <script src="assets/app.js"></script>
+</body>
+</html>

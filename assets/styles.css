@@ -1,0 +1,463 @@
+/* ==========================================================================
+   INSTA SKIN CLINIC - QUIET LUXURY MED-SPA STYLESHEET
+   Skin, Laser & Hair Clinic | Gujranwala, Pakistan
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Google Fonts Import
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --------------------------------------------------------------------------
+   CSS Variables & Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  --bg-primary: #FAF8F5;          /* Warm Ivory */
+  --bg-card: #F2EDE4;             /* Champagne Sand */
+  --bg-dark: #1F2421;             /* Deep Charcoal Espresso */
+  --text-primary: #1F2421;        /* Primary Text */
+  --text-muted: #5C5852;          /* Muted Text */
+  --accent-gold: #B08968;         /* Muted Champagne Gold */
+  --accent-gold-light: #D8C3A5;   /* Soft Champagne Gold */
+  --accent-gold-subtle: #EFE8DE;  /* Very Pale Sand Gold */
+  --cta-emerald: #1E6B52;         /* Deep Botanical Emerald */
+  --cta-emerald-hover: #16523F;   /* Darker Botanical Emerald */
+  --border-light: rgba(176, 137, 104, 0.25);
+  --shadow-luxury: 0 16px 36px -12px rgba(31, 36, 33, 0.08);
+  --shadow-gold: 0 12px 30px -8px rgba(176, 137, 104, 0.25);
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Base & Typography
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5C4AF;
+  border-radius: 6px;
+  border: 2px solid #FAF8F5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08968;
+}
+
+/* Selection Color */
+::selection {
+  background: #B08968;
+  color: #FAF8F5;
+}
+
+/* --------------------------------------------------------------------------
+   Top Fixed 3px Champagne Gold Scroll Progress Bar
+   -------------------------------------------------------------------------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3.5px;
+  background: linear-gradient(90deg, #9A7454 0%, #B08968 50%, #D8C3A5 100%);
+  z-index: 9999;
+  transition: width 0.08s ease-out;
+  box-shadow: 0 0 10px rgba(176, 137, 104, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Luxury Hover & Card Lift Animations
+   -------------------------------------------------------------------------- */
+.luxury-card {
+  transition: transform 0.4s var(--ease-luxury), 
+              box-shadow 0.4s var(--ease-luxury), 
+              border-color 0.4s var(--ease-luxury);
+  border: 1px solid var(--border-light);
+  background-color: #F2EDE4;
+}
+
+.luxury-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -14px rgba(176, 137, 104, 0.28), 0 10px 24px -10px rgba(31, 36, 33, 0.08);
+  border-color: rgba(176, 137, 104, 0.65);
+}
+
+.luxury-card-dark {
+  transition: transform 0.4s var(--ease-luxury), 
+              box-shadow 0.4s var(--ease-luxury), 
+              border-color 0.4s var(--ease-luxury);
+  border: 1px solid rgba(176, 137, 104, 0.2);
+  background-color: #272E2A;
+}
+
+.luxury-card-dark:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 0 25px -4px rgba(176, 137, 104, 0.2);
+  border-color: rgba(176, 137, 104, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   Button Styles & Animations
+   -------------------------------------------------------------------------- */
+.btn-emerald {
+  background-color: var(--cta-emerald);
+  color: #FFFFFF;
+  transition: all 0.3s var(--ease-luxury);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px -6px rgba(30, 107, 82, 0.4);
+}
+
+.btn-emerald:hover {
+  background-color: var(--cta-emerald-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(30, 107, 82, 0.5);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #B08968 0%, #C2A78D 100%);
+  color: #FFFFFF;
+  transition: all 0.3s var(--ease-luxury);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px -6px rgba(176, 137, 104, 0.35);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #9A7454 0%, #B08968 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -6px rgba(176, 137, 104, 0.5);
+}
+
+.btn-outline-gold {
+  border: 1.5px solid var(--accent-gold);
+  color: var(--text-primary);
+  background: transparent;
+  transition: all 0.3s var(--ease-luxury);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--accent-gold);
+  color: #FAF8F5;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -6px rgba(176, 137, 104, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Reveal System (IntersectionObserver)
+   -------------------------------------------------------------------------- */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease-luxury), transform 0.8s var(--ease-luxury);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.8s var(--ease-luxury), transform 0.8s var(--ease-luxury);
+}
+
+.reveal-fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.8s var(--ease-luxury), transform 0.8s var(--ease-luxury);
+}
+
+.reveal-zoom-in {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.8s var(--ease-luxury), transform 0.8s var(--ease-luxury);
+}
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger delay helpers */
+.delay-100 { transition-delay: 100ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+
+/* --------------------------------------------------------------------------
+   Hero Text Line Mask Reveal
+   -------------------------------------------------------------------------- */
+.mask-line-container {
+  overflow: hidden;
+  display: block;
+}
+
+.mask-line-text {
+  display: block;
+  transform: translateY(110%);
+  animation: maskLineUp 1s var(--ease-luxury) forwards;
+}
+
+.mask-line-text-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.mask-line-text-delay-2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes maskLineUp {
+  0% {
+    transform: translateY(115%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* Hero image settle animation */
+.hero-image-settle {
+  transform: scale(1.08);
+  animation: heroSettle 1.4s var(--ease-luxury) forwards;
+}
+
+@keyframes heroSettle {
+  0% {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Interactive Before & After Comparison Slider
+   -------------------------------------------------------------------------- */
+.ba-container {
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  touch-action: pan-y;
+  cursor: ew-resize;
+  border-radius: 1rem;
+}
+
+.ba-before-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ba-after-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color: #B08968;
+  box-shadow: 0 0 14px rgba(176, 137, 104, 0.7);
+  z-index: 10;
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  pointer-events: none;
+}
+
+.ba-handle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background-color: #FAF8F5;
+  border: 2px solid #B08968;
+  color: #1F2421;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Infinite Pause-on-Hover Google Reviews Marquee
+   -------------------------------------------------------------------------- */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 45s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Floating WhatsApp Button Ambient Pulse Ring
+   -------------------------------------------------------------------------- */
+.ambient-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: rgba(30, 107, 82, 0.4);
+  animation: pulseEmerald 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  z-index: -1;
+}
+
+@keyframes pulseEmerald {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accordion Smooth Animation
+   -------------------------------------------------------------------------- */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-luxury), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: #B08968;
+}
+
+.accordion-icon {
+  transition: transform 0.3s var(--ease-luxury), color 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Results Category Filter Pills
+   -------------------------------------------------------------------------- */
+.filter-btn.active {
+  background-color: #B08968;
+  color: #FAF8F5;
+  border-color: #B08968;
+  box-shadow: 0 4px 15px rgba(176, 137, 104, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Slide-over Drawers & Overlays
+   -------------------------------------------------------------------------- */
+.drawer-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-luxury);
+}
+
+.drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  transform: translateX(100%);
+  transition: transform 0.4s var(--ease-luxury);
+}
+
+.drawer-panel.active {
+  transform: translateX(0%);
+}
+
+/* Subtle Shimmer & Gold Gradient Backgrounds */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #B08968 0%, #D8C3A5 70%, #9A7454 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #B08968 0%, #D8C3A5 100%);
+}
+
+.bg-pattern-subtle {
+  background-image: radial-gradient(rgba(176, 137, 104, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
