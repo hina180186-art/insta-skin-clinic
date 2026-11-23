@@ -359,7 +359,7 @@ export default function HomePage() {
 
             <StaggerItem>
               <LuxuryCard className="rounded-2xl p-7 bg-[#F2EDE4] border border-[#B08968]/30 block group relative overflow-hidden h-full">
-                <Link href="/treatments/acne-scar-laser" className="block h-full">
+                <Link href="/concerns/acne-scars-texture" className="block h-full">
                   <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#B08968]/30 flex items-center justify-center text-[#B08968] mb-5 group-hover:scale-110 transition-transform duration-300">
                     <Layers className="w-6 h-6" />
                   </div>
@@ -861,11 +861,13 @@ export default function HomePage() {
             <FadeInUp delay={0.2} className="lg:col-span-7">
               <div className="relative bg-[#F2EDE4] p-3 rounded-3xl border-2 border-[#B08968]/30 shadow-2xl">
                 <BeforeAfterSlider
-                  beforeSrc="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1200&q=80"
-                  afterSrc="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80"
-                  beforeLabel="Before Treatment"
-                  afterLabel="After 4 Sessions"
-                  className="h-[420px] sm:h-[480px]"
+                  beforeSrc="/images/before-scars.jpg"
+                  afterSrc="/images/after-scars.jpg"
+                  beforeLabel="BEFORE"
+                  afterLabel="AFTER"
+                  beforeSub="ACTIVE PITTED & ROLLING SCARS"
+                  afterSub="AFTER 3 SESSIONS (RF & LASER)"
+                  aspectRatio="aspect-[4/3] sm:aspect-[4/5]"
                 />
                 <p className="text-center text-xs text-[#5C5852] mt-3">
                   <Touchpad className="w-3.5 h-3.5 inline text-[#B08968] mr-1" />

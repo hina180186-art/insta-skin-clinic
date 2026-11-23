@@ -5,6 +5,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { TREATMENTS } from "@/data/treatments";
 import FaqAccordion from "@/components/FaqAccordion";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import {
   Clock,
   ShieldCheck,
@@ -48,6 +49,96 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const COMPARISON_DATA: Record<
+  string,
+  {
+    title: string;
+    badge: string;
+    description: string;
+    beforeSrc: string;
+    afterSrc: string;
+    beforeLabel: string;
+    afterLabel: string;
+    beforeSub: string;
+    afterSub: string;
+    statLeftTitle: string;
+    statLeftVal: string;
+    statRightTitle: string;
+    statRightVal: string;
+  }
+> = {
+  "acne-scar-laser": {
+    badge: "Verified Patient Outcome • Acne Scars",
+    title: "Interactive Split-Slider: Atrophic Acne Scar Remodeling",
+    description:
+      "Interactive photographic comparison of a Pakistani female patient presenting with severe pitted, boxcar, and rolling scars across the cheek. Treated with multi-depth Fractional CO2 laser ablation and RF neocollagenesis at our Peoples Colony clinic. Notice the 85–90% scar elevation, textural remodeling, and natural skin glow.",
+    beforeSrc: "/images/before-scars.jpg",
+    afterSrc: "/images/after-scars.jpg",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "ACTIVE PITTED & ROLLING SCARS",
+    afterSub: "AFTER 3 SESSIONS (RF & LASER)",
+    statLeftTitle: "Baseline Presentation",
+    statLeftVal: "Severe Pitted & Boxcar Scars",
+    statRightTitle: "3 Sessions Result",
+    statRightVal: "85% - 90% Scar Elevation",
+  },
+  "laser-hair-removal": {
+    badge: "Clinical Progress • Laser Hair Reduction",
+    title: "Interactive Split-Slider: Triple Wavelength Clearance",
+    description:
+      "Witness follicle destruction and subsequent skin smoothing on stubborn facial hair. Treated with chilled sapphire contact triple-wavelength laser, leaving zero razor bumps or ingrown hairs.",
+    beforeSrc:
+      "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1000&q=80",
+    afterSrc:
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "COARSE HORMONAL FOLLICLES",
+    afterSub: "AFTER 6 SESSIONS (90% CLEARANCE)",
+    statLeftTitle: "Baseline Density",
+    statLeftVal: "Coarse Follicular Growth",
+    statRightTitle: "Protocol Clearance",
+    statRightVal: "90% Permanent Reduction",
+  },
+  hydrafacial: {
+    badge: "Instant Glow • Vortex Extraction",
+    title: "Interactive Split-Slider: Pore Clarification & Glass Glow",
+    description:
+      "Examine congested micro-comedones cleared via medical vortex suction, followed by deep hyaluronic acid and antioxidant saturation for a radiant finish.",
+    beforeSrc:
+      "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=80",
+    afterSrc:
+      "https://images.unsplash.com/photo-1512290900672-1f0236a28189?auto=format&fit=crop&w=1000&q=80",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "CONGESTED SEBUM & PORES",
+    afterSub: "POST HYDRAFACIAL MD GLOW",
+    statLeftTitle: "Baseline Epidermis",
+    statLeftVal: "Dull, Congested Pores",
+    statRightTitle: "Instant Result",
+    statRightVal: "Glass Skin Hydration",
+  },
+  "prp-hair-restoration": {
+    badge: "Trichology Medicine • Follicular Density",
+    title: "Interactive Split-Slider: Scalp Density Regeneration",
+    description:
+      "Autologous growth factor micro-injections reactivate dormant root sheaths, reversing Norwood vertex thinning and increasing terminal strand caliper.",
+    beforeSrc:
+      "https://images.unsplash.com/photo-1585751119414-ef2636f8aede?auto=format&fit=crop&w=1000&q=80",
+    afterSrc:
+      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=80",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "DIFFUSE VERTEX THINNING",
+    afterSub: "AFTER 4 PRP SESSIONS",
+    statLeftTitle: "Baseline Scalp",
+    statLeftVal: "Miniaturized Vellus Hairs",
+    statRightTitle: "Growth Outcome",
+    statRightVal: "Terminal Follicle Density",
+  },
+};
+
 export default async function TreatmentDetailPage({ params }: Props) {
   const { slug } = await params;
   const treatment = TREATMENTS[slug];
@@ -55,6 +146,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
   if (!treatment) {
     notFound();
   }
+
+  const comparison = COMPARISON_DATA[slug];
 
   const encodedWhatsApp = `https://wa.me/923009353482?text=${encodeURIComponent(
     `Hi Insta Skin Clinic, I would like to consult about ${treatment.title}. Please provide appointment availability.`
@@ -257,6 +350,79 @@ export default async function TreatmentDetailPage({ params }: Props) {
           </div>
         </FadeInUp>
       </section>
+
+      {/* Interactive Split-Slider Comparative Section */}
+      {comparison && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <FadeInUp>
+            <div className="bg-[#F2EDE4] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#B08968]/30 shadow-xl">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-6 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E6B52]/10 border border-[#1E6B52]/20">
+                    <span className="w-2 h-2 rounded-full bg-[#1E6B52]" />
+                    <span className="text-xs font-bold text-[#1E6B52] uppercase tracking-wider">
+                      {comparison.badge}
+                    </span>
+                  </div>
+                  <MaskedReveal>
+                    <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                      {comparison.title}
+                    </h2>
+                  </MaskedReveal>
+                  <p className="text-sm sm:text-base text-[#5C5852] leading-relaxed">
+                    {comparison.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 text-xs text-[#1F2421] pt-2">
+                    <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#B08968]/20 shadow-sm">
+                      <span className="text-[10px] text-[#B08968] font-bold uppercase block tracking-wider">
+                        {comparison.statLeftTitle}
+                      </span>
+                      <strong className="text-xs sm:text-sm text-[#1F2421] mt-0.5 block">
+                        {comparison.statLeftVal}
+                      </strong>
+                    </div>
+                    <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#1E6B52]/30 shadow-sm">
+                      <span className="text-[10px] text-[#1E6B52] font-bold uppercase block tracking-wider">
+                        {comparison.statRightTitle}
+                      </span>
+                      <strong className="text-xs sm:text-sm text-[#1E6B52] mt-0.5 block">
+                        {comparison.statRightVal}
+                      </strong>
+                    </div>
+                  </div>
+                  <div className="pt-2">
+                    <a
+                      href={encodedWhatsApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-emerald px-7 py-3.5 text-xs font-bold inline-flex items-center gap-2 shadow-lg"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Consult Doctor on Similar Results</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="lg:col-span-6">
+                  <div className="relative bg-[#FAF8F5] p-2 sm:p-3 rounded-3xl border border-[#B08968]/30 shadow-2xl">
+                    <BeforeAfterSlider
+                      beforeSrc={comparison.beforeSrc}
+                      afterSrc={comparison.afterSrc}
+                      beforeLabel={comparison.beforeLabel}
+                      afterLabel={comparison.afterLabel}
+                      beforeSub={comparison.beforeSub}
+                      afterSub={comparison.afterSub}
+                      aspectRatio="aspect-[4/3] sm:aspect-[4/5]"
+                    />
+                    <p className="text-center text-xs text-[#5C5852] mt-2.5 font-medium">
+                      ↔ Drag the golden slider left & right to examine texture elevation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeInUp>
+        </section>
+      )}
 
       {/* How It Works / Science with Stagger & LuxuryCard */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">

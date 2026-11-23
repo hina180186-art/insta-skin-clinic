@@ -119,4 +119,51 @@ export const CONCERNS: Record<string, ConcernData> = {
     relatedTreatmentSlug: "hydrafacial",
     relatedTreatmentName: "Signature HydraFacial MD & Chemical Peels",
   },
+  "acne-scars-texture": {
+    slug: "acne-scars-texture",
+    title: "Acne Scars, Deep Pits & Textural Indentations",
+    subtitle: "Clinical guide to diagnosing and remodeling atrophic boxcar, rolling, and icepick scars at Insta Skin Clinic, Kashmir Rd, Peoples Colony, Gujranwala.",
+    heroBadge: "Ablative Dermal Neocollagenesis & Remodeling",
+    heroImage: "/images/before-scars.jpg",
+    overview: "Atrophic acne scars occur when severe cystic inflammation destroys dermal collagen, leaving behind permanent pitted craters or tethered fibrous indentations. In Pakistan, unverified home remedies, abrasive scrubs, and parlor microneedling often trigger post-inflammatory hyperpigmentation without elevating the depressed floor. At Insta Skin Clinic on Kashmir Road, our medical doctors employ multi-depth Fractional CO2 laser ablation, cannula subcision, and RF neocollagenesis to biologically reconstruct smooth skin texture.",
+    causesTitle: "The 3 Primary Classes of Acne Scars",
+    causesIntro: "Effective treatment requires matching specialized energy depths to exact scar morphology:",
+    causes: [
+      {
+        iconName: "layers",
+        title: "Rolling Scars (Fibrotic Tethers)",
+        description: "Broad, wavy indentations caused by subcutaneous fibrotic bands pulling the epidermis inward. Requires cannula subcision to release the tethered bands followed by laser stimulation.",
+      },
+      {
+        iconName: "activity",
+        title: "Boxcar Scars (Sharp Crater Borders)",
+        description: "Depressions with sharp vertical boundaries that cast dark shadows under lighting. Treated with Fractional CO2 laser ablation to vaporize steep shoulders and level the floor.",
+      },
+      {
+        iconName: "dna",
+        title: "Icepick Scars (Deep Micro-Columns)",
+        description: "Punctate, deep V-shaped columns extending into the deep reticular dermis. Addressed via focal high-concentration TCA CROSS chemical reconstruction followed by overall resurfacing.",
+      },
+    ],
+    failsTitle: "What Fails: Parlor Facials & Derma Rollers",
+    failsDescription: "Topical vitamin creams, aloe vera, and commercial masks cannot replace lost dermal volume. Furthermore, manual parlor derma rollers enter the skin at an angle, dragging needles through tissue and creating micro-tears that frequently cause dark rebound hyperpigmentation (PIH) on South Asian skin.",
+    worksTitle: "What Works: Doctor-Led Fractional CO2 + Subcision",
+    worksDescription: "Medical Fractional CO2 laser creates thousands of microscopic thermal treatment columns deep in the dermis while sparing healthy intervening tissue. This prompts the body's natural wound-healing cascade to synthesize fresh Type-I and Type-III collagen bundles, elevating scar craters by up to 85–90% permanently.",
+    faqs: [
+      {
+        question: "How many sessions are typically required for severe pitted scars?",
+        answer: "Most moderate to severe atrophic acne scarring cases in Gujranwala require 3 to 5 clinical sessions spaced 4 to 6 weeks apart. Patients typically observe 40% to 50% textural smoothing after session 2, with cumulative collagen remodeling continuing for up to 6 months after the final pass.",
+      },
+      {
+        question: "Is Fractional CO2 safe for South Asian skin types?",
+        answer: "Yes, when performed by certified aesthetic physicians. Pakistani skin (Fitzpatrick III-V) requires conservative pulse durations, optimized stack fluences, and strict pre- and post-inflammatory management. Our doctors calibrate energy parameters specifically to avoid post-inflammatory hyperpigmentation.",
+      },
+      {
+        question: "Can I combine acne scar treatment with PRP growth factors?",
+        answer: "Absolutely. In fact, combining autologous PRP (platelet-rich plasma) with Fractional CO2 accelerates re-epithelialization, cuts social redness downtime from 6 days down to 3 days, and amplifies collagen synthesis for superior scar leveling.",
+      },
+    ],
+    relatedTreatmentSlug: "acne-scar-laser",
+    relatedTreatmentName: "Fractional CO2 Laser Resurfacing",
+  },
 };

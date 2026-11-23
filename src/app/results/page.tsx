@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, ShieldCheck, Star } from "lucide-react";
+import { Sparkles, ShieldCheck, Star, MessageCircle } from "lucide-react";
 import ResultsFilter from "@/components/ResultsFilter";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import {
   MaskedReveal,
   FadeInUp,
@@ -82,6 +83,73 @@ export default function ResultsPage() {
               epidermal texture and density restorations.
             </p>
           </FadeInUp>
+        </div>
+      </section>
+
+      {/* Featured Acne Scar Transformation Spotlight */}
+      <section className="py-12 bg-[#F2EDE4]/80 border-y border-[#B08968]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E6B52]/10 border border-[#1E6B52]/20">
+                <span className="w-2 h-2 rounded-full bg-[#1E6B52]" />
+                <span className="text-xs font-bold text-[#1E6B52] uppercase tracking-wider">
+                  Featured Case Study • Severe Acne Scars
+                </span>
+              </div>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                85% Scar Elevation & Texture Smoothing
+              </h2>
+              <p className="text-sm text-[#5C5852] leading-relaxed">
+                Authentic, un-retouched photographic documentation of deep atrophic, rolling, and boxcar scarring on the cheek of a Pakistani female patient. Following 3 customized sessions of Fractional CO2 Laser Resurfacing paired with subcision and growth-factor biostimulation at our Peoples Colony clinic, the epidermal architecture achieved dramatic leveling with natural micro-details preserved.
+              </p>
+              <div className="grid grid-cols-2 gap-3 text-xs pt-1">
+                <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#B08968]/20 shadow-sm">
+                  <span className="text-[10px] text-[#B08968] font-bold uppercase block tracking-wider">
+                    Protocol
+                  </span>
+                  <strong className="text-xs text-[#1F2421]">
+                    3 Sessions Fractional CO2 + RF
+                  </strong>
+                </div>
+                <div className="p-3 bg-[#FAF8F5] rounded-xl border border-[#1E6B52]/30 shadow-sm">
+                  <span className="text-[10px] text-[#1E6B52] font-bold uppercase block tracking-wider">
+                    Downtime
+                  </span>
+                  <strong className="text-xs text-[#1E6B52]">
+                    3 Days Micro-Crusting
+                  </strong>
+                </div>
+              </div>
+              <div className="pt-2">
+                <a
+                  href="https://wa.me/923009353482?text=Hello%20Insta%20Skin%20Clinic,%20I%20am%20viewing%20the%20acne%20scar%20before%20and%20after%20case%20study%20and%20would%20like%20to%20consult%20the%20doctor."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-emerald px-6 py-3 text-xs font-bold inline-flex items-center gap-2 shadow-md"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>Consult on this Case via WhatsApp</span>
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="bg-[#FAF8F5] p-2 sm:p-3 rounded-3xl border border-[#B08968]/30 shadow-2xl">
+                <BeforeAfterSlider
+                  beforeSrc="/images/before-scars.jpg"
+                  afterSrc="/images/after-scars.jpg"
+                  beforeLabel="BEFORE"
+                  afterLabel="AFTER"
+                  beforeSub="ACTIVE PITTED & ROLLING SCARS"
+                  afterSub="AFTER 3 SESSIONS (RF & LASER)"
+                  aspectRatio="aspect-[4/3] sm:aspect-[4/5]"
+                />
+                <p className="text-center text-xs text-[#5C5852] mt-2.5 font-medium">
+                  ↔ Interactive Split-Slider: Drag left and right to inspect scar leveling
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

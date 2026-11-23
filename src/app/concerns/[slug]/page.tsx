@@ -5,6 +5,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CONCERNS } from "@/data/concerns";
 import FaqAccordion from "@/components/FaqAccordion";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import {
   ChevronRight,
   Sparkles,
@@ -70,6 +71,78 @@ function getCauseIcon(iconName: string) {
   }
 }
 
+const CONCERN_COMPARISONS: Record<
+  string,
+  {
+    title: string;
+    badge: string;
+    description: string;
+    beforeSrc: string;
+    afterSrc: string;
+    beforeLabel: string;
+    afterLabel: string;
+    beforeSub: string;
+    afterSub: string;
+    statLeftTitle: string;
+    statLeftVal: string;
+    statRightTitle: string;
+    statRightVal: string;
+  }
+> = {
+  "acne-scars-texture": {
+    badge: "Clinical Progress • Severe Acne Scars",
+    title: "Interactive Split-Slider: Atrophic Acne Scar Remodeling",
+    description:
+      "Inspect genuine pore-level skin leveling on a Pakistani female patient. Following 3 sessions combining Fractional CO2 laser ablation and RF neocollagenesis at Insta Skin Clinic, deep tethered rolling and boxcar depressions were filled by 85–90% while preserving natural South Asian melanin tone.",
+    beforeSrc: "/images/before-scars.jpg",
+    afterSrc: "/images/after-scars.jpg",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "ACTIVE PITTED & ROLLING SCARS",
+    afterSub: "AFTER 3 SESSIONS (RF & LASER)",
+    statLeftTitle: "Baseline Tissue",
+    statLeftVal: "Severe Pitted Scarring",
+    statRightTitle: "Clinical Outcome",
+    statRightVal: "85% - 90% Remodeling",
+  },
+  "hair-fall-thinning": {
+    badge: "Clinical Progress • Hair Density",
+    title: "Interactive Split-Slider: Crown Follicular Recovery",
+    description:
+      "Noticeable follicular revitalization and terminal hair thickening achieved through autologous PRP therapy and medical biostimulation at our Gujranwala practice.",
+    beforeSrc:
+      "https://images.unsplash.com/photo-1585751119414-ef2636f8aede?auto=format&fit=crop&w=1000&q=80",
+    afterSrc:
+      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=80",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "DIFFUSE VERTEX THINNING",
+    afterSub: "AFTER 4 PRP SESSIONS",
+    statLeftTitle: "Baseline Scalp",
+    statLeftVal: "Shedding & Miniaturization",
+    statRightTitle: "Growth Outcome",
+    statRightVal: "Active Anagen Re-entry",
+  },
+  "pigmentation-melasma": {
+    badge: "Clinical Progress • Melasma Clearance",
+    title: "Interactive Split-Slider: Dermal Melanin Clearance",
+    description:
+      "Safe fragmentation of mixed epidermal and dermal melasma using sub-photothermal Q-switched laser toning and medical tranexamic acid protocols.",
+    beforeSrc:
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1000&q=80",
+    afterSrc:
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1000&q=80",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "STUBBORN CHEEK MELASMA",
+    afterSub: "AFTER 5 TONING PASSES",
+    statLeftTitle: "Baseline Pigment",
+    statLeftVal: "Bilateral Melasma Patches",
+    statRightTitle: "Clearance Rate",
+    statRightVal: "80% - 90% Brightened",
+  },
+};
+
 export default async function ConcernDetailPage({ params }: Props) {
   const { slug } = await params;
   const concern = CONCERNS[slug];
@@ -77,6 +150,9 @@ export default async function ConcernDetailPage({ params }: Props) {
   if (!concern) {
     notFound();
   }
+
+  const comparison =
+    CONCERN_COMPARISONS[slug] || CONCERN_COMPARISONS["acne-scars-texture"];
 
   const encodedWhatsApp = `https://wa.me/923009353482?text=${encodeURIComponent(
     `Hi Insta Skin Clinic, I would like to consult about ${concern.title}. Please provide appointment availability.`
@@ -262,6 +338,79 @@ export default async function ConcernDetailPage({ params }: Props) {
           </FadeInUp>
         </div>
       </section>
+
+      {/* Interactive Split-Slider Comparative Section */}
+      {comparison && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <FadeInUp>
+            <div className="bg-[#F2EDE4] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#B08968]/30 shadow-xl">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-6 space-y-5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1E6B52]/10 border border-[#1E6B52]/20">
+                    <span className="w-2 h-2 rounded-full bg-[#1E6B52]" />
+                    <span className="text-xs font-bold text-[#1E6B52] uppercase tracking-wider">
+                      {comparison.badge}
+                    </span>
+                  </div>
+                  <MaskedReveal>
+                    <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#1F2421]">
+                      {comparison.title}
+                    </h2>
+                  </MaskedReveal>
+                  <p className="text-sm sm:text-base text-[#5C5852] leading-relaxed">
+                    {comparison.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3 text-xs text-[#1F2421] pt-2">
+                    <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#B08968]/20 shadow-sm">
+                      <span className="text-[10px] text-[#B08968] font-bold uppercase block tracking-wider">
+                        {comparison.statLeftTitle}
+                      </span>
+                      <strong className="text-xs sm:text-sm text-[#1F2421] mt-0.5 block">
+                        {comparison.statLeftVal}
+                      </strong>
+                    </div>
+                    <div className="p-3.5 bg-[#FAF8F5] rounded-xl border border-[#1E6B52]/30 shadow-sm">
+                      <span className="text-[10px] text-[#1E6B52] font-bold uppercase block tracking-wider">
+                        {comparison.statRightTitle}
+                      </span>
+                      <strong className="text-xs sm:text-sm text-[#1E6B52] mt-0.5 block">
+                        {comparison.statRightVal}
+                      </strong>
+                    </div>
+                  </div>
+                  <div className="pt-2">
+                    <a
+                      href={encodedWhatsApp}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-emerald px-7 py-3.5 text-xs font-bold inline-flex items-center gap-2 shadow-lg"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Consult Doctor on Similar Case</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="lg:col-span-6">
+                  <div className="relative bg-[#FAF8F5] p-2 sm:p-3 rounded-3xl border border-[#B08968]/30 shadow-2xl">
+                    <BeforeAfterSlider
+                      beforeSrc={comparison.beforeSrc}
+                      afterSrc={comparison.afterSrc}
+                      beforeLabel={comparison.beforeLabel}
+                      afterLabel={comparison.afterLabel}
+                      beforeSub={comparison.beforeSub}
+                      afterSub={comparison.afterSub}
+                      aspectRatio="aspect-[4/3] sm:aspect-[4/5]"
+                    />
+                    <p className="text-center text-xs text-[#5C5852] mt-2.5 font-medium">
+                      ↔ Drag the golden slider left & right to inspect clinical transformation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </FadeInUp>
+        </section>
+      )}
 
       {/* Recommended Clinical Treatment Card */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">

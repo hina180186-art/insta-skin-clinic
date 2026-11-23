@@ -15,6 +15,10 @@ interface CaseStudy {
   description: string;
   beforeImg: string;
   afterImg: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+  beforeSub?: string;
+  afterSub?: string;
   specs: {
     protocol: string;
     downtime: string;
@@ -30,17 +34,19 @@ const CASES: CaseStudy[] = [
     category: "scars",
     categoryLabel: "Acne Scars & Texture",
     code: "Case #CO2-094",
-    title: "Fractional CO2 Laser + Subcision Protocol",
+    title: "Fractional CO2 + RF Microneedling Protocol",
     description:
-      "24-year-old male with persistent rolling & boxcar scars. 4 sessions scheduled 4 weeks apart combined with autologous growth factors. Significant 80%+ scar elevation and pore remodeling.",
-    beforeImg:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1000&q=80",
-    afterImg:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80",
+      "Pakistani female patient presenting with severe pitted, boxcar, and rolling scars on cheek and jawline. Treated with combined Fractional CO2 Laser Resurfacing and Microneedling Radiofrequency. Clinical outcome after 3 sessions demonstrating 85-90% scar elevation, textural remodeling, and healthy dermal regeneration.",
+    beforeImg: "/images/before-scars.jpg",
+    afterImg: "/images/after-scars.jpg",
+    beforeLabel: "BEFORE",
+    afterLabel: "AFTER",
+    beforeSub: "ACTIVE PITTED & ROLLING SCARS",
+    afterSub: "AFTER 3 SESSIONS (RF & LASER)",
     specs: {
-      protocol: "4 Treatments",
-      downtime: "3 Days Erythema",
-      patient: "Age 24 (Gujranwala)",
+      protocol: "3 Sessions",
+      downtime: "3 Days Micro-Crusting",
+      patient: "Female (Gujranwala)",
       doctor: "Dr. Akhtar",
     },
     whatsappText: "Hello Insta Skin Clinic, I am asking about Acne Scar Case CO2-094.",
@@ -199,9 +205,12 @@ export default function ResultsFilter() {
               <BeforeAfterSlider
                 beforeSrc={cs.beforeImg}
                 afterSrc={cs.afterImg}
-                beforeLabel="Before"
-                afterLabel="After"
-                className="h-80 sm:h-96 rounded-2xl mb-5"
+                beforeLabel={cs.beforeLabel || "BEFORE"}
+                afterLabel={cs.afterLabel || "AFTER"}
+                beforeSub={cs.beforeSub}
+                afterSub={cs.afterSub}
+                aspectRatio="aspect-[4/3] sm:aspect-[4/5]"
+                className="mb-5 rounded-2xl"
               />
 
               <div className="space-y-3">
